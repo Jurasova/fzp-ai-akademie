@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dělám rešerši — FŽP AI Akademie</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-nav="vpraxi-reserse">
+    <script>window.PORTAL_PATH_PREFIX = '../';</script>
+
+    <div class="shell">
+      <aside id="sidebar"></aside>
+      <main class="content">
+
+        <header class="topbar">
+          <nav class="breadcrumb">
+            <a href="../index.html">FŽP AI Akademie</a>
+            › <span>AI v praxi</span>
+            › <b>Dělám rešerši</b>
+          </nav>
+        </header>
+
+        <article class="page-body">
+
+          <div class="page-header">
+            <div class="label">AI v praxi</div>
+            <h1>Dělám rešerši</h1>
+            <p class="perex">Od první otázky po strukturovaný přehled literatury — pro článek, grant, přednášku nebo diplomku.</p>
+          </div>
+
+          <!-- Situation card -->
+          <div class="situation-card">
+            <p><strong>Situace:</strong> Potřebujete zmapovat literaturu k tématu. Máte před sebou stovky potenciálně relevantních článků a nevíte, kde začít ani jak z toho udělat použitelný přehled.</p>
+          </div>
+
+          <!-- Co AI zvládne a co ne -->
+          <h2>Co AI zvládne a co ne</h2>
+          <div class="two-col">
+            <div class="col-card col-yes">
+              <h3>AI pomůže</h3>
+              <ul>
+                <li>Prohledat 138M+ článků za minuty</li>
+                <li>Sestavit evidenční tabulku přes desítky studií</li>
+                <li>Vizualizovat propojení mezi klíčovými články</li>
+                <li>Zodpovědět konkrétní výzkumné otázky s citacemi</li>
+                <li>Odhalit, zda byl citát zpochybněn dalším výzkumem</li>
+              </ul>
+            </div>
+            <div class="col-card col-no">
+              <h3>AI nenahradí</h3>
+              <ul>
+                <li>Váš odborný úsudek o relevanci</li>
+                <li>Interpretaci výsledků ve vašem kontextu</li>
+                <li>Rozhodnutí o inclusion/exclusion kritériích</li>
+                <li>Syntézu a originální závěry</li>
+                <li>Odpovědnost za správnost tvrzení</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Flow strip -->
+          <h2>Workflow: od otázky po strukturovaný přehled</h2>
+          <div class="flow-strip">
+            <span class="flow-chip" style="background:#378ADD">1 Mapa pole</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#1D9E75">2 Rešerše</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#7F77DD">3 Konsenzus</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#BA7517">4 Syntéza</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#378ADD">5 Ověření</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#1D9E75">6 Export</span>
+          </div>
+
+          <!-- Krok 1 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">1</span>
+              Zmapujte pole
+              <span class="step-meta">ResearchRabbit</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Na úplném začátku, ještě před tím, než víte, jaké klíčové články existují.</p>
+              <ol>
+                <li>Otevřete ResearchRabbit (researchrabbitapp.com) — je zdarma.</li>
+                <li>Zadejte název jednoho článku, který znáte a je relevantní pro vaše téma.</li>
+                <li>ResearchRabbit zobrazí vizuální mapu: které články ho citují, které cituje on, a které jsou tematicky příbuzné.</li>
+                <li>Přidávejte zajímavé články do kolekce — mapa se rozšiřuje.</li>
+                <li>Exportujte kolekci do Zotero pro správu referencí.</li>
+              </ol>
+              <p><strong>Výstup:</strong> 20–50 relevantních článků seřazených podle citační sítě, ne podle klíčových slov.</p>
+              <div class="warning-card">
+                <div class="warn-title">Pozor</div>
+                <p>ResearchRabbit nezná vaše téma, zná jen citační strukturu. Začněte od kvalitního seed článku — pokud začnete od okrajové studie, mapa bude zavádějící.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 2 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#1D9E75">2</span>
+              Proveďte strukturovanou rešerši
+              <span class="step-meta">Elicit</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Když víte, jakou výzkumnou otázku řešíte a potřebujete systematický přehled.</p>
+              <ol>
+                <li>Otevřete Elicit (elicit.com) a zadejte výzkumnou otázku přirozeným jazykem — celou větu, ne klíčová slova.</li>
+                <li>Elicit vrátí relevantní studie s automaticky extrahovanými informacemi (metoda, vzorek, výsledky).</li>
+                <li>Přizpůsobte sloupce tabulky — přidejte rok, design studie, velikost vzorku, hlavní proměnné, závěry.</li>
+                <li>Pro rozsáhlejší rešerši (20+ článků) použijte Systematic Review — nastavte inclusion/exclusion kritéria.</li>
+              </ol>
+              <p>Příklad <strong>dobré</strong> výzkumné otázky pro Elicit:</p>
+              <div class="prompt-block">What are the effects of microplastic contamination on soil microbial diversity in agricultural soils in temperate climate zones?<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p>Příklad <strong>špatné</strong> otázky (příliš obecná):</p>
+              <div class="prompt-block">microplastics soil<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p><strong>Výstup:</strong> Strukturovaná tabulka 30–100 studií s klíčovými daty, připravená k exportu do CSV.</p>
+              <div class="warning-card">
+                <div class="warn-title">Pozor</div>
+                <p>Elicit pracuje primárně s anglickými zdroji. Českou nebo středoevropskou literaturu doplňte přes Web of Science nebo Scopus. Elicit může chybět novější práce (posledních 6 měsíců) — doplňte Google Scholar s filtrem "od roku 2024".</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 3 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#7F77DD">3</span>
+              Ověřte vědecký konsenzus
+              <span class="step-meta">Consensus</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Když potřebujete rychle zjistit, jestli věda na vaši otázku odpovídá jednoznačně, nebo je téma sporné.</p>
+              <ol>
+                <li>Otevřete Consensus (consensus.app).</li>
+                <li>Zadejte výzkumnou otázku ve formátu, na který lze odpovědět ano/ne nebo tendencí.</li>
+                <li>Consensus ukáže „Consensus Meter" — vizuální indikátor míry shody studií.</li>
+                <li>Klikněte na jednotlivé studie — každá má přímou citaci z textu.</li>
+              </ol>
+              <p>Příklady vhodných otázek:</p>
+              <div class="prompt-block">Does forest fragmentation reduce bird species richness?
+Is nitrogen fertilization associated with decreased soil microbial diversity?
+Do green roofs reduce urban heat island effect?<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p><strong>Výstup:</strong> Rychlá odpověď s citacemi do 2 minut.</p>
+              <div class="warning-card">
+                <div class="warn-title">Pozor</div>
+                <p>Consensus zjednodušuje — komplexní debaty redukuje na binární odpověď. Pro nuancovaná témata použijte Elicit. Consensus je nejsilnější v biomedicíně a přírodních vědách.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 4 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#BA7517">4</span>
+              Syntetizujte přes vlastní PDF
+              <span class="step-meta">NotebookLM</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Když máte stažená klíčová PDF a potřebujete syntézu bez rizika halucinací.</p>
+              <ol>
+                <li>Otevřete NotebookLM (notebooklm.google.com) — je zdarma s Google účtem.</li>
+                <li>Nahrajte 10–50 klíčových PDF ze svého výzkumu.</li>
+                <li>NotebookLM odpovídá <strong>výhradně z vašich dokumentů</strong> — nevymýšlí nic navíc.</li>
+                <li>Ptejte se konkrétně:</li>
+              </ol>
+              <div class="prompt-block">Které z nahraných studií zkoumaly vliv pH půdy na mikrobiální diverzitu?
+Jaké metody měření byly použity napříč nahranými studiemi?
+Kde si jednotlivé studie protiřečí v závěrech?<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p><strong>Výstup:</strong> Syntéza s přesnými citacemi z vašich vlastních dokumentů — žádné vymyšlené reference.</p>
+              <p><strong>Proč NotebookLM místo Claude nebo ChatGPT:</strong> Claude a ChatGPT mají znalosti z tréninku, ale nemají přístup k vašim konkrétním PDF. NotebookLM pracuje výhradně s tím, co nahrajete.</p>
+            </div>
+          </details>
+
+          <!-- Krok 5 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">5</span>
+              Zkontrolujte klíčové citace
+              <span class="step-meta">Scite</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Než citaci použijete v článku nebo grantu, zejména pokud jde o klíčové tvrzení.</p>
+              <ol>
+                <li>Otevřete Scite (scite.ai) a vyhledejte DOI nebo název článku.</li>
+                <li>Scite ukáže: kolikrát byl článek citován, a jak — podporujícími, zpochybňujícími, nebo neutrálními citacemi.</li>
+                <li>Červená vlajka = článek byl opakovaně zpochybněn. Citovat ho bez výhrady by byl problém.</li>
+              </ol>
+              <p><strong>Proč to dělat:</strong> Retracted nebo zpochybněné články vypadají v databázích normálně. Scite odhalí, co Google Scholar skryje.</p>
+            </div>
+          </details>
+
+          <!-- Krok 6 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#1D9E75">6</span>
+              Exportujte do Zotero
+              <span class="step-meta">Zotero</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Průběžně, od prvního kroku.</p>
+              <ul>
+                <li>Z ResearchRabbit: přímý export kolekce do Zotero</li>
+                <li>Z Elicit: export do CSV → import do Zotero přes identifikátory DOI</li>
+                <li>Z Google Scholar: rozšíření Zotero Connector zachytí článek jedním klikem</li>
+              </ul>
+              <p>Zotero pak automaticky formátuje citace v jakémkoli citačním stylu (APA, Vancouver, ISO 690…).</p>
+            </div>
+          </details>
+
+          <!-- Nástroje -->
+          <h2>Jaké nástroje použít</h2>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-phase">Mapa oboru</div>
+              <h4>ResearchRabbit</h4>
+              <p>Vizualizace citačních sítí, discovery kolem seed článku.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Systematická rešerše</div>
+              <h4>Elicit</h4>
+              <p>Evidenční tabulky, extrakce dat, 138M+ článků.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Vědecký konsenzus</div>
+              <h4>Consensus</h4>
+              <p>Rychlé odpovědi s citacemi, Consensus Meter.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Syntéza PDF</div>
+              <h4>NotebookLM</h4>
+              <p>Odpovědi výhradně z vašich dokumentů.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Ověření citací</div>
+              <h4>Scite</h4>
+              <p>Smart Citations — podporující vs. zpochybňující.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Správa referencí</div>
+              <h4>Zotero</h4>
+              <p>Export, formátování citací, integrace s Wordem.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Česká literatura</div>
+              <h4>Web of Science / Scopus</h4>
+              <p>Pokrytí mimo anglosaský mainstream.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Aktuální novinky</div>
+              <h4>Google Scholar</h4>
+              <p>Nejnovější publikace, alert na nové práce.</p>
+            </div>
+          </div>
+
+          <p class="muted-footer">
+            Poslední aktualizace: duben 2026 · FŽP AI Akademie ·
+            Dotazy pište do Teams kanálu AI na FŽP.
+          </p>
+
+        </article>
+      </main>
+    </div>
+
+    <script src="../utils.js"></script>
+    <script src="../sidebar.js"></script>
+  </body>
+</html>

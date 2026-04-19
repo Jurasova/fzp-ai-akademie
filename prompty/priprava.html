@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Příprava — Prompty — FŽP AI Akademie</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-nav="prompty-priprava">
+    <script>
+      window.PORTAL_PATH_PREFIX = '../';
+    </script>
+    <div class="shell">
+      <aside id="sidebar"></aside>
+      <main class="content">
+        <header class="topbar">
+          <nav class="breadcrumb">
+            <a href="../index.html">FŽP AI Akademie</a> › <span>Prompty pro výuku</span> › <b>Příprava</b>
+          </nav>
+        </header>
+        <article class="page-body">
+          <div class="page-header">
+            <div class="label">Prompty pro výuku</div>
+            <h1>Příprava výuky</h1>
+            <p class="perex">Šablony promptů pro plánování, osnovy a materiály před hodinou.</p>
+          </div>
+          <details class="prompty-section">
+            <summary>Šablona: struktura hodiny (placeholder)</summary>
+            <div class="step-body">
+              <p class="placeholder-note">Obsah prompt banky se doplní zde — akordeon zůstává ve výchozím stavu zavřený.</p>
+              <div class="prompt-block">
+Jsem pedagog na FŽP a připravuji seminář k tématu: [téma].
+Navrhni strukturu 90minutové hodiny včetně aktivit a kontrolních otázek.
+                <button type="button" class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button>
+              </div>
+            </div>
+          </details>
+        </article>
+      </main>
+    </div>
+    <script src="../utils.js"></script>
+    <script src="../sidebar.js"></script>
+  </body>
+</html>

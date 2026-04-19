@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Název záložky — Prompty pro výuku — FŽP AI Akademie</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <!--
+    ŠABLONA: Prompty pro výuku
+    ──────────────────────────
+    Zkopíruj do /prompty/, nastav:
+      · data-nav="prompty-KLIC"   (priprava | vyuka | hodnoceni | pravidla)
+      · <title> a breadcrumb
+      · Nahraď placeholder obsah skutečnými prompty
+    Každý prompt = jeden <details class="prompty-item">.
+    Všechny akordeony zavřené při načtení (žádný atribut open).
+    Odstraň tento komentář.
+  -->
+
+  <body data-nav="prompty-KLIC">
+    <script>
+      window.PORTAL_PATH_PREFIX = '../';
+    </script>
+
+    <div class="shell">
+      <aside id="sidebar"></aside>
+
+      <main class="content">
+        <header class="topbar">
+          <nav class="breadcrumb">
+            <a href="../index.html">FŽP AI Akademie</a>
+            › <span>Prompty pro výuku</span>
+            › <b>Název záložky</b>
+          </nav>
+        </header>
+
+        <article class="page-body">
+
+          <div class="page-header">
+            <div class="label">Prompty pro výuku</div>
+            <h1>Název záložky</h1>
+            <p class="perex">Krátký popis — k čemu tyto prompty slouží a kdy je použít.</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">💡</span>
+            <p>
+              Klikněte na název prompty pro zobrazení. Tlačítkem <strong>Kopírovat</strong>
+              zkopírujete text do schránky a pak ho vložíte přímo do Copilotu, ChatGPT nebo Clause.
+            </p>
+          </div>
+
+
+          <!-- ── Skupina promptů (opakuj pro každou kategorii) ── -->
+
+          <h2>Skupina / scénář</h2>
+
+          <details class="prompty-item">
+            <summary>Název promptu 1</summary>
+            <div class="step-body">
+              <p>
+                <strong>Kdy použít:</strong> Krátký popis situace, ve které tento prompt pomůže.
+              </p>
+              <div class="prompt-block">Jsem [role] na Fakultě životního prostředí ČZU.
+Potřebuji [konkrétní úkol].
+Kontext: [doplňte].
+
+Výstup: [co očekáváte — formát, délka, styl].<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p class="placeholder-note">Tip: upravte závorky [ ] podle své konkrétní situace.</p>
+            </div>
+          </details>
+
+          <details class="prompty-item">
+            <summary>Název promptu 2</summary>
+            <div class="step-body">
+              <p>
+                <strong>Kdy použít:</strong> Krátký popis situace.
+              </p>
+              <div class="prompt-block">Text druhého promptu.
+[doplňte kontext]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="prompty-item">
+            <summary>Název promptu 3</summary>
+            <div class="step-body">
+              <p>
+                <strong>Kdy použít:</strong> Krátký popis situace.
+              </p>
+              <div class="prompt-block">Text třetího promptu.
+[doplňte kontext]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+
+          <!-- ── Druhá skupina (opakuj blok h2 + prompty-item) ── -->
+
+          <h2>Druhá skupina / scénář</h2>
+
+          <details class="prompty-item">
+            <summary>Název promptu 4</summary>
+            <div class="step-body">
+              <p>
+                <strong>Kdy použít:</strong> Krátký popis situace.
+              </p>
+              <div class="prompt-block">Text čtvrtého promptu.
+[doplňte kontext]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="prompty-item">
+            <summary>Název promptu 5</summary>
+            <div class="step-body">
+              <p>
+                <strong>Kdy použít:</strong> Krátký popis situace.
+              </p>
+              <div class="prompt-block">Text pátého promptu.
+[doplňte kontext]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+
+          <p class="muted-footer">
+            Obsah připravila Vlaďka Müllerová · FŽP AI Akademie · duben 2026
+          </p>
+
+        </article>
+      </main>
+    </div>
+
+    <script src="../utils.js"></script>
+    <script src="../sidebar.js"></script>
+  </body>
+</html>

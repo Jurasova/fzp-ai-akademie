@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Název stránky — FŽP AI Akademie</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <!--
+    INSTRUKCE PRO POUŽITÍ:
+    1. Zkopíruj tento soubor do příslušné podsložky (např. navody/, bezpecnost/…).
+    2. Nastav window.PORTAL_PATH_PREFIX:
+         - stránky v podsložce (navody/, v-praxi/…) → '../'
+         - stránky v root (vedle index.html)         → ''
+    3. Nastav data-nav na <body> — musí odpovídat data-nav příslušného odkazu v sidebar.js.
+    4. Uprav <title>, breadcrumb a obsah v <article>.
+    5. Odstraň tento komentář.
+  -->
+
+  <body data-nav="SEKCE-STRANKA">
+    <script>
+      window.PORTAL_PATH_PREFIX = '../';
+    </script>
+
+    <div class="shell">
+
+      <!-- Sidebar se vloží automaticky přes sidebar.js -->
+      <aside id="sidebar"></aside>
+
+      <main class="content">
+
+        <!-- Topbar s breadcrumb -->
+        <header class="topbar">
+          <nav class="breadcrumb">
+            <a href="../index.html">FŽP AI Akademie</a>
+            › <span>Sekce</span>
+            › <b>Název stránky</b>
+          </nav>
+        </header>
+
+        <!-- Obsah stránky -->
+        <article class="page-body">
+
+          <div class="page-header">
+            <div class="label">Sekce</div>
+            <h1>Název stránky</h1>
+            <p class="perex">Krátký popis — jedna až dvě věty.</p>
+          </div>
+
+          <!-- Obsah doplníte zde -->
+          <p class="placeholder-note">Obsah stránky doplníte zde.</p>
+
+        </article>
+      </main>
+    </div>
+
+    <script src="../utils.js"></script>
+    <script src="../sidebar.js"></script>
+  </body>
+</html>

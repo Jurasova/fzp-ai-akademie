@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Píšu vědecký článek — FŽP AI Akademie</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-nav="vpraxi-clanek">
+    <script>window.PORTAL_PATH_PREFIX = '../';</script>
+
+    <div class="shell">
+      <aside id="sidebar"></aside>
+      <main class="content">
+
+        <header class="topbar">
+          <nav class="breadcrumb">
+            <a href="../index.html">FŽP AI Akademie</a>
+            › <span>AI v praxi</span>
+            › <b>Píšu vědecký článek</b>
+          </nav>
+        </header>
+
+        <article class="page-body">
+
+          <div class="page-header">
+            <div class="label">AI v praxi</div>
+            <h1>Píšu vědecký článek</h1>
+            <p class="perex">Od rešerše po submission — kde AI zkrátí cestu a kde ji nesmíte nechat rozhodovat za vás.</p>
+          </div>
+
+          <!-- Situation card -->
+          <div class="situation-card">
+            <p><strong>Situace:</strong> Máte výzkumná data, potřebujete z nich udělat publikovatelný článek. Rešerše zabírá dny, psaní v angličtině je pomalé a revision od kolegů trvá týdny. AI vám pomůže zkrátit cestu od dat k hotovému rukopisu — ale musíte vědět, kde pomáhá a kde škodí.</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">💡</span>
+            <p><strong>Zlaté pravidlo:</strong> AI je výborný asistent pro rešerši a jazyk, ale interpretace a originální myšlení jsou vaše práce. Každý výstup AI musíte ověřit a přepracovat do vlastních slov.</p>
+          </div>
+
+          <!-- Co AI zvládne a co ne -->
+          <h2>Co AI zvládne a co ne</h2>
+          <div class="two-col">
+            <div class="col-card col-yes">
+              <h3>AI pomůže</h3>
+              <ul>
+                <li>Najít relevantní články a shrnout je</li>
+                <li>Navrhnout strukturu a osnovu</li>
+                <li>Opravit a vylepšit angličtinu</li>
+                <li>Extrahovat data z desítek PDF</li>
+                <li>Naformátovat citace a reference</li>
+              </ul>
+            </div>
+            <div class="col-card col-no">
+              <h3>AI nenahradí</h3>
+              <ul>
+                <li>Váš originální výzkumný přínos</li>
+                <li>Interpretaci vašich konkrétních výsledků</li>
+                <li>Odpovědnost za správnost tvrzení</li>
+                <li>Kritické myšlení a propojení zjištění</li>
+                <li>Etický úsudek a rozhodnutí o autorství</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Flow strip -->
+          <h2>Workflow: od rešerše po submission</h2>
+          <div class="flow-strip">
+            <span class="flow-chip" style="background:#378ADD">1 Rešerše</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#7F77DD">2 Osnova</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#1D9E75">3 Psaní</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#BA7517">4 Jazyk</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#378ADD">5 Citace</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#7F77DD">6 Disclosure</span>
+          </div>
+
+          <!-- Krok 1 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">1</span>
+              Zmapujte literaturu
+              <span class="step-meta">Elicit + Consensus</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Na začátku práce, než začnete psát Introduction.</p>
+              <ol>
+                <li>Otevřete <strong>Elicit</strong> (elicit.com) a zadejte výzkumnou otázku přirozeným jazykem — ne klíčová slova, ale celou otázku.</li>
+                <li>Elicit prohledá 138+ milionů článků a vrátí relevantní výsledky s automaticky extrahovanými informacemi — metody, vzorek, hlavní zjištění.</li>
+                <li>Vyfiltrujte relevantní články a nechte Elicit vygenerovat <strong>evidenční tabulku</strong>.</li>
+                <li>Pro ověření konsenzu v oboru použijte <strong>Consensus</strong> (consensus.app).</li>
+              </ol>
+              <p><strong>Výstup:</strong> Strukturovaný přehled 20–50 nejrelevantnějších článků, připravený pro psaní Introduction a Discussion.</p>
+              <div class="warning-card">
+                <div class="warn-title">Na co dát pozor</div>
+                <p>Elicit i Consensus pracují primárně s anglickými zdroji. Vždy si otevřete alespoň 5–10 klíčových článků v plném znění — shrnutí od AI nenahrazuje skutečné čtení. Zkontrolujte, zda AI nezaměnila dva články se stejným prvním autorem.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 2 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#7F77DD">2</span>
+              Vytvořte osnovu článku
+              <span class="step-meta">Claude / ChatGPT / Copilot</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Když máte přehled o literatuře a víte, co chcete sdělit.</p>
+              <div class="prompt-block">Jsem výzkumník v oblasti [vaše oblast]. Píšu článek do časopisu [název nebo typ časopisu].
+
+Moje hlavní zjištění:
+- [zjištění 1]
+- [zjištění 2]
+- [zjištění 3]
+
+Navrhni strukturu článku ve formátu IMRaD. Pro každou sekci napiš:
+- Hlavní bod, který má sekce sdělit
+- 2–3 klíčové argumenty nebo podkapitoly
+- Přibližný rozsah (počet slov)
+
+Nepiš samotný text, jen strukturu.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p><strong>Proč jen osnovu:</strong> Nechat AI napsat celý článek je kontraproduktivní — výsledek bude generický, bez vašeho hlasu a originálního přínosu. Osnova vám ušetří hodiny přemýšlení nad strukturou.</p>
+            </div>
+          </details>
+
+          <!-- Krok 3 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#1D9E75">3</span>
+              Napište první draft sami
+              <span class="step-meta">—</span>
+            </summary>
+            <div class="step-body">
+              <p>Tohle je krok, kde AI <strong>nepoužívejte</strong> na generování textu. Napište první verzi vlastními slovy. Vaše myšlenky, vaše interpretace, váš přínos.</p>
+              <p>Kde AI přesto pomůže:</p>
+              <ul>
+                <li><strong>Zaseknete se na formulaci?</strong> Napište myšlenku česky a nechte AI přeložit do akademické angličtiny.</li>
+                <li><strong>Nevíte, jak uvést sekci?</strong> Požádejte o 3 varianty úvodní věty — ale přepracujte do vlastního stylu.</li>
+                <li><strong>Potřebujete ověřit termín?</strong> Zeptejte se AI na správné použití odborného termínu v kontextu vaší disciplíny.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Krok 4 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#BA7517">4</span>
+              Vylepšete jazyk a styl
+              <span class="step-meta">Copilot / Claude / Writefull</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Když máte hotový draft a potřebujete vylepšit angličtinu.</p>
+              <p><strong>Varianta A — Copilot ve Wordu:</strong> Označte odstavec → Copilot → "Rewrite for academic tone, improve clarity and conciseness."</p>
+              <p><strong>Varianta B — Claude nebo ChatGPT:</strong></p>
+              <div class="prompt-block">Jsi editor akademického časopisu v oblasti environmental science.
+Uprav tento text tak, aby:
+- Angličtina byla gramaticky bezchybná
+- Styl odpovídal standardům impaktovaného časopisu
+- Věty byly stručné a přesné
+- Zachoval se původní význam — nic nepřidávej, nevynechávej a nevymýšlej
+
+Text k úpravě:
+[vložte odstavec]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p><strong>Varianta C — specializované nástroje:</strong> <span class="tool-badge badge-blue">Writefull</span> <span class="tool-badge badge-teal">Paperpal</span></p>
+              <div class="warning-card">
+                <div class="warn-title">Na co dát pozor</div>
+                <p>AI má tendenci „vylepšovat" text tak, že přidá tvrzení, která jste neučinili. Vždy porovnejte výstup s originálem. Pokud AI přeformuluje větu s odkazem na zdroj, zkontrolujte, že odkaz stále odpovídá tomu, co zdroj říká.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 5 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">5</span>
+              Zkontrolujte citace a reference
+              <span class="step-meta">Elicit / Scopus / WoS</span>
+            </summary>
+            <div class="step-body">
+              <p>Tohle je kritický krok, kde AI chybuje nejčastěji.</p>
+              <div class="warning-card">
+                <div class="warn-title">Nikdy nežádejte AI o vyhledání citací</div>
+                <p>Chatboty vymýšlejí neexistující články — tzv. hallucinated references. Vypadají věrohodně (autor, rok, časopis), ale neexistují. Citace hledejte výhradně přes Elicit, Consensus, Web of Science, Scopus nebo Google Scholar.</p>
+              </div>
+              <p>Pokud máte hotový seznam referencí, můžete AI požádat o kontrolu formátování:</p>
+              <div class="prompt-block">Zkontroluj tento seznam referencí podle stylu APA 7th edition.
+Oprav formátování, ale neměň obsah — neupravuj názvy, autory ani roky.
+Pokud něco vypadá neobvykle, upozorni mě místo opravy.
+
+[vložte seznam referencí]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <!-- Krok 6 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#7F77DD">6</span>
+              Disclosure a etika
+              <span class="step-meta">Před odesláním</span>
+            </summary>
+            <div class="step-body">
+              <p>Většina vědeckých časopisů v roce 2026 vyžaduje <strong>uvést, jak jste AI použili</strong>. Neuvést to je považováno za porušení publikační etiky.</p>
+              <p>Typická formulace pro Acknowledgments:</p>
+              <div class="prompt-block">The authors acknowledge the use of [název nástroje] (accessed [měsíc rok])
+for [konkrétní účel: language editing / literature search / data visualization].
+All AI-assisted outputs were reviewed, revised, and approved by the authors,
+who take full responsibility for the accuracy and integrity of the work.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p>Co zkontrolovat před odesláním:</p>
+              <ul>
+                <li>Pravidla konkrétního časopisu pro AI — "Instructions for Authors" nebo "AI Policy" (Wiley, Elsevier, Springer Nature mají vlastní požadavky).</li>
+                <li>AI nemůže být uvedena jako spoluautor — konsenzus všech velkých vydavatelů.</li>
+                <li>Pokud jste AI použili pro analýzu dat nebo kód, uveďte to v sekci Methods.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Nástroje -->
+          <h2>Jaké nástroje použít</h2>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-phase">Rešerše</div>
+              <h4>Elicit</h4>
+              <p>Hledání článků, evidenční tabulky, systematické review.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Rešerše</div>
+              <h4>Consensus</h4>
+              <p>Ověření konsenzu, rychlé odpovědi s citacemi.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Psaní</div>
+              <h4>Claude / ChatGPT</h4>
+              <p>Osnova, překlad, formulace.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Jazyk</div>
+              <h4>Writefull / Paperpal</h4>
+              <p>Akademická angličtina, kontrola stylu.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Jazyk</div>
+              <h4>Copilot ve Wordu</h4>
+              <p>Přepisování odstavců přímo v dokumentu.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Citace</div>
+              <h4>Zotero + Elicit</h4>
+              <p>Správa referencí, export, formátování.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Kontrola</div>
+              <h4>NotebookLM</h4>
+              <p>Diskuse nad vlastními PDF bez halucinací.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Vizualizace sítí</div>
+              <h4>Connected Papers</h4>
+              <p>Vizualizace citačních sítí kolem klíčového článku.</p>
+            </div>
+          </div>
+
+          <p class="muted-footer">
+            Poslední aktualizace: duben 2026 · FŽP AI Akademie ·
+            Dotazy pište do Teams kanálu AI na FŽP.
+          </p>
+
+        </article>
+      </main>
+    </div>
+
+    <script src="../utils.js"></script>
+    <script src="../sidebar.js"></script>
+  </body>
+</html>

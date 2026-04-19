@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Název situace — FŽP AI Akademie</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <!--
+    ŠABLONA: AI v praxi — situační stránka
+    ───────────────────────────────────────
+    Zkopíruj do /v-praxi/, nastav:
+      · window.PORTAL_PATH_PREFIX = '../'     (ponechat)
+      · data-nav="vpraxi-KLIC"               (viz sidebar.js)
+      · <title>, breadcrumb, page-header
+    Odstraň tento komentář a placeholder texty.
+    Pořadí komponent zachovej — Vlaďka doplní obsah.
+  -->
+
+  <body data-nav="vpraxi-KLIC">
+    <script>
+      window.PORTAL_PATH_PREFIX = '../';
+    </script>
+
+    <div class="shell">
+      <aside id="sidebar"></aside>
+
+      <main class="content">
+        <header class="topbar">
+          <nav class="breadcrumb">
+            <a href="../index.html">FŽP AI Akademie</a>
+            › <span>AI v praxi</span>
+            › <b>Název situace</b>
+          </nav>
+        </header>
+
+        <article class="page-body">
+
+          <!-- Záhlaví stránky -->
+          <div class="page-header">
+            <div class="label">AI v praxi</div>
+            <h1>Název situace</h1>
+            <p class="perex">Krátký popis situace — pro koho je stránka určena a co ji řeší.</p>
+          </div>
+
+
+          <!-- ① Situation card ──────────────────────────────── -->
+          <div class="situation-card">
+            <p>
+              <strong>Situace:</strong> Konkrétní popis situace, ve které se uživatel nachází.
+              Co potřebuje udělat, proč je to náročné a jak mu AI pomůže.
+            </p>
+          </div>
+
+
+          <!-- ② Two-column card — AI pomůže / AI nenahradí ─── -->
+          <h2>Co AI zvládne a co ne</h2>
+          <div class="two-col">
+            <div class="col-card col-yes">
+              <h3>AI pomůže</h3>
+              <ul>
+                <li>Položka 1</li>
+                <li>Položka 2</li>
+                <li>Položka 3</li>
+              </ul>
+            </div>
+            <div class="col-card col-no">
+              <h3>AI nenahradí</h3>
+              <ul>
+                <li>Položka 1</li>
+                <li>Položka 2</li>
+                <li>Položka 3</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- ③ Flow strip — přehled workflow ─────────────── -->
+          <h2>Workflow</h2>
+          <div class="flow-strip">
+            <span class="flow-chip" style="background:#378ADD">1 Krok</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#1D9E75">2 Krok</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#7F77DD">3 Krok</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#BA7517">4 Krok</span>
+          </div>
+
+
+          <!-- ④ Step accordion — kroky workflow ───────────── -->
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">1</span>
+              Název kroku
+              <span class="step-meta">Nástroj</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Kdy:</strong> Popis kontextu — kdy tento krok dělat.</p>
+              <p><strong>Postup:</strong></p>
+              <ol>
+                <li>První krok postupu.</li>
+                <li>Druhý krok postupu.</li>
+                <li>Třetí krok postupu.</li>
+              </ol>
+
+              <!-- ⑤ Prompt block ────────────────────────── -->
+              <p>Použijte tento prompt:</p>
+              <div class="prompt-block">Jsem [role] na FŽP a potřebuji [úkol].
+Kontext: [doplňte].
+Výstup: [co očekáváte].<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+
+              <p><strong>Výstup:</strong> Co dostanete po tomto kroku.</p>
+
+              <!-- ⑥ Warning card ────────────────────────── -->
+              <div class="warning-card">
+                <div class="warn-title">Pozor</div>
+                <p>Důležité upozornění k tomuto kroku — na co si dát pozor.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#1D9E75">2</span>
+              Název druhého kroku
+              <span class="step-meta">Nástroj</span>
+            </summary>
+            <div class="step-body">
+              <p>Obsah druhého kroku. Použijte nástroje:
+                <span class="tool-badge badge-blue">Elicit</span>
+                <span class="tool-badge badge-teal">NotebookLM</span>
+                <span class="tool-badge badge-purple">Claude</span>
+              </p>
+
+              <div class="prompt-block">Prompt pro druhý krok.
+[doplňte kontext]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#7F77DD">3</span>
+              Název třetího kroku
+              <span class="step-meta">Nástroj</span>
+            </summary>
+            <div class="step-body">
+              <p>Obsah třetího kroku.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#BA7517">4</span>
+              Název čtvrtého kroku
+              <span class="step-meta">Nástroj</span>
+            </summary>
+            <div class="step-body">
+              <p>Obsah čtvrtého kroku.</p>
+            </div>
+          </details>
+
+
+          <!-- ⑦ Tool card grid — přehled nástrojů ─────────── -->
+          <h2>Jaké nástroje použít</h2>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-phase">Fáze 1</div>
+              <h4>Název nástroje</h4>
+              <p>K čemu přesně v tomto workflow slouží.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Fáze 2</div>
+              <h4>Název nástroje</h4>
+              <p>K čemu přesně v tomto workflow slouží.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Fáze 3</div>
+              <h4>Název nástroje</h4>
+              <p>K čemu přesně v tomto workflow slouží.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Fáze 4</div>
+              <h4>Název nástroje</h4>
+              <p>K čemu přesně v tomto workflow slouží.</p>
+            </div>
+          </div>
+
+
+          <!-- ⑧ Tool badge — inline použití ve větě ──────────
+               Příklad: "Pro rešerši použijte <span class="tool-badge badge-blue">Elicit</span>"
+               Dostupné třídy: badge-blue · badge-teal · badge-purple · badge-amber · badge-gray
+          ─────────────────────────────────────────────────── -->
+
+
+          <p class="muted-footer">
+            Poslední aktualizace: duben 2026 · FŽP AI Akademie ·
+            Dotazy pište do Teams kanálu AI na FŽP.
+          </p>
+
+        </article>
+      </main>
+    </div>
+
+    <script src="../utils.js"></script>
+    <script src="../sidebar.js"></script>
+  </body>
+</html>
