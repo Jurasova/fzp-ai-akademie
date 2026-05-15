@@ -15,17 +15,153 @@
       <main class="content">
         <header class="topbar">
           <nav class="breadcrumb">
-            <a href="../index.html">FŽP AI Akademie</a> › <span>Jak pracovat s AI</span> › <b>Jak začít s AI</b>
+            <a href="../index.html">FŽP AI Akademie</a> › <b>Jak začít s AI</b>
           </nav>
         </header>
         <article class="page-body">
+
           <div class="page-header">
+            <div class="label">FŽP AI Akademie</div>
             <h1>Jak začít s AI</h1>
-            <p class="perex">První kroky, výběr nástroje a základní zvyk pracovat s AI ve fakultním prostředí.</p>
+            <p class="perex">FŽP AI Akademie je průvodce pro zaměstnance Fakulty životního prostředí ČZU — pedagogy, vědce i administrativní pracovníky. Najdete tu návody, hotové prompty a přehled nástrojů pro každodenní práci s AI.</p>
           </div>
-          <div class="placeholder-note">
-            Tato stránka je připravována. Obsah bude doplněn.
+
+          <div class="situation-card">
+            <p>Ať jste s AI dosud nepracovali, nebo ji chcete začít používat lépe — vyberte svou situaci níže a portál vás navede přímo k tomu, co hledáte.</p>
           </div>
+
+          <!-- Rozcestník podle role / situace -->
+          <h2>Kde chcete začít?</h2>
+          <div class="tools-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+            <a class="tool-card" href="../v-praxi/priprava-vyuky.html" style="text-decoration:none; display:block; color:inherit;">
+              <div class="tool-phase">Pro pedagogy</div>
+              <h4>Připravuji výuku nebo hodnocení</h4>
+              <p>Osnovy, zadání, zpětná vazba studentům, úpravy podmínek kvůli AI.</p>
+            </a>
+
+            <a class="tool-card" href="../v-praxi/vedecky-clanek.html" style="text-decoration:none; display:block; color:inherit;">
+              <div class="tool-phase">Pro vědce</div>
+              <h4>Píšu článek nebo dělám rešerši</h4>
+              <p>Rešerše literatury, korektura angličtiny, analýza dat, příprava grantu.</p>
+            </a>
+
+            <a class="tool-card" href="../v-praxi/administrativa.html" style="text-decoration:none; display:block; color:inherit;">
+              <div class="tool-phase">Pro administrativu</div>
+              <h4>Řeším administrativní agendu</h4>
+              <p>E-maily, zápisy, formuláře a Copilot v Teams, Outlooku a Wordu.</p>
+            </a>
+
+            <a class="tool-card" href="#prvni-hodina" style="text-decoration:none; display:block; color:inherit; border-color:#007364;">
+              <div class="tool-phase" style="color:#007364;">Začínám s AI</div>
+              <h4>Ještě jsem AI moc nezkoušel/a</h4>
+              <p>Konkrétní plán na první hodinu — od otevření nástroje po první výstup.</p>
+            </a>
+
+            <a class="tool-card" href="../aplikace/galerie-nastroju.html" style="text-decoration:none; display:block; color:inherit;">
+              <div class="tool-phase">Přehled nástrojů</div>
+              <h4>Hledám vhodný AI nástroj</h4>
+              <p>Galerie nástrojů pro výzkum, výuku, dokumenty, audio a automatizaci.</p>
+            </a>
+
+            <a class="tool-card" href="ai-mindset.html" style="text-decoration:none; display:block; color:inherit;">
+              <div class="tool-phase">Přístup a principy</div>
+              <h4>Chci AI používat systematičtěji</h4>
+              <p>6 principů přístupu k AI a framework pro každodenní práci.</p>
+            </a>
+
+          </div>
+
+          <!-- První hodina -->
+          <h2 id="prvni-hodina">Váš plán na první hodinu</h2>
+          <p>Pro každého, kdo s AI teprve začíná nebo měl zatím nepřesvědčivé výsledky. Čtyři konkrétní kroky od nuly k prvnímu reálnému výstupu.</p>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">1</span>
+              Otevřete Microsoft Copilot
+              <span class="step-meta">Zdarma přes účet ČZU</span>
+            </summary>
+            <div class="step-body">
+              <p>Jděte na <strong>copilot.microsoft.com</strong> a přihlaste se svým účtem ČZU (stejný login jako do e-mailu). Žádná registrace, žádné poplatky navíc. Copilot je dostupný pro zaměstnance ČZU v rámci licence Microsoft 365.</p>
+              <p>Copilot najdete také přímo v aplikacích, které pravděpodobně denně používáte: v Teams (ikona Copilot v levém panelu), v Outlooku (tlačítko v nástrojové liště) a ve Wordu (záložka Domů).</p>
+              <p>Copilot je doporučený první nástroj, protože pracovní data, která do něj vložíte, se nepoužívají k trénování modelu — na rozdíl od bezplatných verzí jiných nástrojů.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">2</span>
+              Zadejte reálný pracovní úkol
+              <span class="step-meta">Příklady k přímému použití</span>
+            </summary>
+            <div class="step-body">
+              <p>Nezačínejte testem ("co umíš?") ani vymyšleným scénářem. AI dává nejlepší výsledky na reálné pracovní úkoly s konkrétním kontextem. Zkopírujte a upravte jeden z těchto příkladů:</p>
+
+              <p style="margin-top:14px; font-weight:500; font-size:12px; color:var(--color-text-muted); letter-spacing:0.04em; text-transform:uppercase;">Pedagog</p>
+              <div class="prompt-block">Jsem pedagog na Fakultě životního prostředí ČZU Praha. Potřebuji napsat e-mail studentům bakalářského studia, kde shrnu podmínky pro získání zápočtu z předmětu [název předmětu]: [uveďte podmínky]. Napiš formální e-mail v češtině, přiměřeně stručný.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+
+              <p style="margin-top:14px; font-weight:500; font-size:12px; color:var(--color-text-muted); letter-spacing:0.04em; text-transform:uppercase;">Vědec / vědkyně</p>
+              <div class="prompt-block">Jsem vědec na Fakultě životního prostředí ČZU Praha. Potřebuji zkontrolovat a zlepšit akademickou angličtinu v tomto textu. Zachovej odborný styl a obsah, oprav gramatiku a stylistiku: [vložte svůj text].<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+
+              <p style="margin-top:14px; font-weight:500; font-size:12px; color:var(--color-text-muted); letter-spacing:0.04em; text-transform:uppercase;">Administrativa</p>
+              <div class="prompt-block">Jsem administrativní pracovník na české veřejné univerzitě. Potřebuji připravit stručný zápis z porady. Toto jsou moje poznámky: [vložte poznámky]. Napiš formální zápis s body: přítomní, body jednání, přijatá rozhodnutí, úkoly a termíny.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">3</span>
+              Výsledek není skvělý? Přidejte kontext
+              <span class="step-meta">Vstup rozhoduje o výstupu</span>
+            </summary>
+            <div class="step-body">
+              <p>Pokud výstup není dobrý, důvod je téměř vždy v zadání, ne v nástroji. Tři nejrychlejší opravy:</p>
+              <ul>
+                <li><strong>Přidejte kontext</strong> — místo "napiš shrnutí" napište "napiš shrnutí pro studenty 2. ročníku, max. 1 strana, z tohoto textu: [text]"</li>
+                <li><strong>Upřesněte formát</strong> — délka, odrážky nebo odstavce, formální nebo neformální tón, jazyk</li>
+                <li><strong>Pokračujte v konverzaci</strong> — napište "to je moc obecné, zaměř se na [aspekt]" nebo "zkrať na polovinu"</li>
+              </ul>
+              <p>Jak psát prompty systematicky popisuje stránka <a href="rcpo-metoda.html">Jak psát prompty (RCPO)</a>.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">4</span>
+              Kde pokračovat
+              <span class="step-meta">Další kroky v portálu</span>
+            </summary>
+            <div class="step-body">
+              <p>Po prvním výstupu doporučujeme:</p>
+              <ul>
+                <li><a href="../aplikace/copilot-pruvodce.html">Copilot průvodce</a> — co přesně Copilot umí v Teams, Outlooku a Wordu</li>
+                <li><a href="../v-praxi/vedecky-clanek.html">AI v praxi</a> — situační návody pro váš konkrétní typ práce</li>
+                <li><a href="../bezpecnost/co-nesdilet.html">Co nesdílet s AI</a> — přečtěte jednou, pak víte</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Prompt -->
+          <h2>Prompt pro jakýkoliv první krok</h2>
+          <p>Pokud nevíte, kde začít, doplňte a zkopírujte:</p>
+          <div class="prompt-block">Jsem [pedagog / vědec / administrativní pracovník] na Fakultě životního prostředí ČZU Praha.
+
+Potřebuji [konkrétní úkol, např. "napsat e-mail studentům o změně termínu zkoušky"].
+
+[Přidej kontext: klíčové informace, délku, styl, publikum.]
+
+Napiš první verzi v češtině.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+
+          <!-- Zpětná vazba -->
+          <div class="info-card" style="margin-top:32px">
+            <span class="info-icon" aria-hidden="true">💬</span>
+            <div>
+              <p><strong>Co vám chybělo nebo kde jste se ztratili?</strong></p>
+              <p>Portál je živý dokument. Pokud jste nenašli, co jste hledali, nebo narazili na nejasnost, dejte vědět — pomůžete zlepšit materiály pro všechny kolegy. <a href="mailto:mullerovav@fzp.czu.cz?subject=FŽP AI Akademie – zpětná vazba">Napište zpětnou vazbu →</a></p>
+            </div>
+          </div>
+
         </article>
       </main>
     </div>

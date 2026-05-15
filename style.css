@@ -519,6 +519,47 @@ a.card p {
 
 /* ── 8. Speciální komponenty — AI v praxi ───────────────────── */
 
+/* 8.0 Level ladder */
+.level-ladder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.level-rung {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--color-surface);
+  border: 0.5px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.level-rung-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.level-rung-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.level-rung-body p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.level-examples {
+  font-size: 12px !important;
+  color: var(--color-text-tertiary, var(--color-text-secondary)) !important;
+  font-style: italic;
+}
+
 /* 8.1 Situation card */
 .situation-card {
   background: var(--color-surface);
@@ -728,23 +769,44 @@ a.card p {
 .warning-card {
   background: var(--color-warning-bg);
   border-radius: 8px;
-  padding: 12px 14px;
-  margin: 8px 0;
-  border-left: 3px solid var(--color-warning-border);
+  padding: 18px 20px;
+  margin: 16px 0;
+  border-left: 4px solid var(--color-warning-border);
 }
 
 .warn-title {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 700;
   color: var(--color-warning-text);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .warning-card p {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--color-warning-dark);
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.6;
+  margin: 0 0 8px 0;
+}
+
+.warning-card p:last-child {
+  margin-bottom: 0;
+}
+
+.warning-card ul {
+  font-size: 14px;
+  color: var(--color-warning-dark);
+  line-height: 1.6;
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.warning-card li {
+  margin-bottom: 4px;
+}
+
+.warning-card a {
+  color: var(--color-warning-text);
+  font-weight: 600;
 }
 
 /* 8.7 Tool card grid */
@@ -1028,6 +1090,100 @@ a.card p {
 .app-meta__item strong {
   color: var(--color-text-secondary);
   font-weight: 500;
+}
+
+/* ── Galerie AI nástrojů ─────────────────────────────────────────── */
+
+.tools-cat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 20px 0 28px;
+}
+
+.tools-cat-nav a {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 0.5px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.tools-cat-nav a:hover {
+  background: var(--color-brand-light);
+  border-color: var(--color-brand-mid);
+  color: var(--color-success-text);
+}
+
+.tools-section {
+  margin-top: 36px;
+}
+
+.tools-section > h2 {
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid var(--color-border);
+  margin-bottom: 12px;
+}
+
+.tools-section .tools-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tools-section .tool-card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14px 12px;
+}
+
+.tools-section .tool-card h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.tool-provider {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.tools-section .tool-card p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.tool-best-for {
+  font-size: 11px;
+  color: var(--color-success-text);
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 0.5px solid var(--color-border);
+}
+
+.tool-best-for strong {
+  font-weight: 600;
+}
+
+.tool-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-brand-mid);
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.tool-link:hover {
+  text-decoration: underline;
+  color: var(--color-success-text);
 }
 
 /* ── Sidebar — disabled položka a badge ─────────────────────────── */

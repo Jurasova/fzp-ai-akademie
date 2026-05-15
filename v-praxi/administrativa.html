@@ -19,16 +19,320 @@
           </nav>
         </header>
         <article class="page-body">
+
           <div class="page-header">
             <div class="label">AI v praxi</div>
             <h1>Řeším administrativu</h1>
-            <p class="perex">E-maily, zápisy, pozvánky, tabulky — bez duplikace s Copilot kuchařkou.</p>
+            <p class="perex">E-maily, zápisy, cestovní příkazy, překlady: kde AI ušetří hodiny opakující se práce a co musí vždy projít vaší kontrolou.</p>
           </div>
-          <p>
-            Na krátké úkoly s jedním nástrojem (Copilot) se hodí
-            <a href="../aplikace/copilot-kucharka.html">Copilot kuchařka</a>. Tato stránka doplní širší workflow napříč nástroji.
-          </p>
-          <p class="placeholder-note">Obsah doplníme.</p>
+
+          <div class="situation-card">
+            <p>Administrativa zahrnuje stovky opakujících se textových úkolů. AI nepřevezme odpovědnost za rozhodnutí, ale zvládne první verzi téměř každého dokumentu — rychleji a s méně úsilím než psaní od nuly.</p>
+          </div>
+
+          <!-- Co AI zvládne a co ne -->
+          <h2>Co AI zvládne a co ne</h2>
+          <div class="two-col">
+            <div class="col-card col-yes">
+              <h3>AI pomůže</h3>
+              <ul>
+                <li>První verze e-mailů, dopisů a sdělení</li>
+                <li>Strukturované zápisy se souhrnem úkolů</li>
+                <li>Pozvánky a oznámení v různých tónech</li>
+                <li>Shrnutí dokumentů pro různé příjemce</li>
+                <li>Překlad nebo formalizace textu</li>
+                <li>Extrakce dat z dokladů a faktur</li>
+                <li>Odpovědi na opakující se dotazy studentů</li>
+              </ul>
+            </div>
+            <div class="col-card col-no">
+              <h3>AI nenahradí</h3>
+              <ul>
+                <li>Odpovědnost za přijatá rozhodnutí</li>
+                <li>Znalost aktuálních předpisů a procesů ČZU</li>
+                <li>Interní termíny, kontakty a kontext, které AI nezná</li>
+                <li>Data ze systémů ČZU (IS, Moodle, Teams) — AI je nezná, pokud je nedodáte</li>
+                <li>Posouzení citlivého mezilidského kontextu</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pyramida adopce -->
+          <h2>Kde začít</h2>
+          <div class="level-ladder">
+            <div class="level-rung">
+              <span class="step-num" style="background:#1D9E75;flex-shrink:0">1</span>
+              <div class="level-rung-body">
+                <div class="level-rung-title">Reaktivní — hned od prvního dne</div>
+                <p>Jednorázové úkoly přímo v dialogu s AI. Nevyžaduje žádnou přípravu.</p>
+                <p class="level-examples">Shrnutí e-mailové diskuse, překlad, první verze pozvánky nebo oznámení</p>
+              </div>
+            </div>
+            <div class="level-rung">
+              <span class="step-num" style="background:#378ADD;flex-shrink:0">2</span>
+              <div class="level-rung-body">
+                <div class="level-rung-title">Procesní — po zvládnutí úrovně 1</div>
+                <p>Opakující se workflow se šablonou promptu. Ušetří hodiny každý měsíc.</p>
+                <p class="level-examples">Cestovní příkazy z dokladů, zápisy z porad se souhrnem úkolů, kontrola náležitostí faktur</p>
+              </div>
+            </div>
+            <div class="level-rung">
+              <span class="step-num" style="background:#7F77DD;flex-shrink:0">3</span>
+              <div class="level-rung-body">
+                <div class="level-rung-title">Systematická — až je procesní úroveň rutinou</div>
+                <p>Analýza a přehled, které dosud nikdo nestihal dělat.</p>
+                <p class="level-examples">Skenování grantových výzev, smluvní review, konsolidace podkladů napříč projekty</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Situační kroky -->
+          <h2>Situace krok za krokem</h2>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">1</span>
+              E-mail nebo dopis
+              <span class="step-meta">Jasný, zdvořilý, orientovaný na akci</span>
+            </summary>
+            <div class="step-body">
+              <p>AI napíše e-mail, který je věcný, zdvořilý a vede k jasnému závěru. Zadejte účel, příjemce a co od něj potřebujete — a první verzi máte za minutu. Výsledek vždy upravte podle svého hlasu a doplňte konkrétní detaily, které AI nezná (jména, termíny, vnitřní kontext).</p>
+              <div class="prompt-block">Napiš profesionální e-mail v češtině.
+
+Účel: [spolupráce / připomínky / dotaz / informování / žádost]
+Příjemce: [kolega / student / vedení / externí partner]
+Oslovení: [Vážený pane děkane / Vážená paní proděkance / Vážené kolegyně a kolegové]
+Hlavní sdělení: [co chci sdělit]
+Požadovaná akce: [co má příjemce udělat nebo odpovědět]
+Termín: [pokud existuje]
+Tón: [formální / přátelský / naléhavý]
+
+Struktura: krátký úvod (jedna věta), hlavní sdělení, konkrétní další kroky, zdvořilé zakončení.
+Zachovej akademické tituly přesně tak, jak jsou zadány.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">2</span>
+              Zápis z porady
+              <span class="step-meta">Z poznámek nebo přepisu za minuty</span>
+            </summary>
+            <div class="step-body">
+              <p>Vložte hrubé poznámky nebo přepis záznamu a AI vytvoří strukturovaný formální zápis. Klíčová přidaná hodnota: souhrn úkolů na konci jako samostatná sekce — tu si tajemnice může rovnou zkopírovat a rozeslat účastníkům.</p>
+              <div class="prompt-block">Z těchto poznámek nebo přepisu schůzky vytvoř formální zápis.
+
+Poznámky / přepis: [vložte text]
+
+Výstup má obsahovat:
+1. Datum, místo a přítomní (pokud jsou v textu)
+2. Body jednání (očíslované)
+3. Přijatá rozhodnutí
+4. Úkoly: kdo, co, do kdy (pokud jsou uvedeny)
+5. Souhrn všech úkolů na konci jako samostatná tabulka
+
+Styl: formální, stručný, věcný.
+Necituj přímou řeč — parafrázuj.
+Nedomýšlej informace, které v textu nejsou.
+Pokud nelze určit, kdo má úkol, napiš "nepřiděleno".<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">3</span>
+              Pozvánka nebo oznámení
+              <span class="step-meta">Interní i externí komunikace</span>
+            </summary>
+            <div class="step-body">
+              <p>Pro workshopy, porady, semináře nebo jiné akce — AI připraví text pozvánky nebo oznámení odpovídající vašemu publiku a tónu.</p>
+              <div class="prompt-block">Napiš pozvánku na akci.
+
+Název akce: [doplňte]
+Datum a místo: [doplňte]
+Cílová skupina: [kolegové z katedry / studenti / partneři z praxe / veřejnost]
+Účel akce: [1 věta]
+Co účastníci získají: [stručně]
+Tón: [formální / přátelský]
+Délka: [krátká — max 150 slov / standardní — do 250 slov]<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">4</span>
+              Shrnutí dokumentu nebo zprávy
+              <span class="step-meta">Tři formáty pro různé příjemce</span>
+            </summary>
+            <div class="step-body">
+              <p>Nahrajte nebo vložte dokument a specifikujte, pro koho shrnutí připravujete. Prompt vrátí tři verze — jednověté, pětibodové a manažerské — takže máte na výběr bez dalšího dotazování.</p>
+              <div class="prompt-block">Shrň přiložený dokument [NÁZEV] pro [CÍLOVÝ ČTENÁŘ: vedení / kolega / externí partner].
+
+Vrať tři verze v tomto pořadí:
+
+1. Jednověté shrnutí (max 25 slov) — co je hlavní sdělení
+2. Pětibodové shrnutí (max 5 odrážek po 1–2 větách) — pro rychlou orientaci
+3. Manažerské shrnutí (200–250 slov) — kontext, klíčová zjištění, doporučení, rizika
+
+Pravidla:
+- Necituj. Parafrázuj.
+- U klíčových čísel uveď stranu zdroje.
+- Pokud má dokument nejasnou nebo problematickou část, vyznač ji v sekci "Co stojí za pozornost".
+- Pokud informace v dokumentu není, napiš "nenalezeno".<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">5</span>
+              Překlad nebo formalizace textu
+              <span class="step-meta">Do angličtiny s akademickým slovníkem</span>
+            </summary>
+            <div class="step-body">
+              <p>Máte český text, který potřebujete přeložit do angličtiny pro zahraniční partnery nebo grantovou komisi? Prompt obsahuje standardizovaný slovník akademických pojmů ČZU — AI ho dostane jako instrukci, aby tituly a funkce nepřekládala libovolně.</p>
+              <div class="prompt-block">Přelož přiložený text do angličtiny. Cílová úroveň: oficiální akademická angličtina (UK).
+
+Zachovej věcný a zdvořilý tón.
+
+Akademický slovník — použij tato standardizovaná překlady:
+- děkan = Dean
+- proděkan = Vice-Dean
+- tajemník/tajemnice fakulty = Faculty Secretary
+- studijní oddělení = Study Office
+- habilitační řízení = habilitation procedure
+- doc. = doc. (Associate Professor)
+- prof. = prof. (Professor)
+- Ing. = Ing. (zachovat v originále)
+- Mgr. = Mgr. (zachovat v originále)
+
+Pokud je v textu český idiom, přepiš ho významem, ne doslova.
+
+Pod překlad přidej tři poznámky:
+- Co bylo přeloženo nejednoznačně a proč
+- Který výraz stojí za zvážení změnit
+- Jeden návrh na zvýšení formálnosti, pokud to dává smysl<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <p>Pro anglické texty doporučujeme výsledek zkontrolovat nástrojem Writefull nebo Copilot ve Wordu.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">6</span>
+              Cestovní příkazy z dokladů
+              <span class="step-meta">Extrakce dat ze skenů za minuty</span>
+            </summary>
+            <div class="step-body">
+              <p>Naskenujte nebo nahrajte doklady z cesty a AI vytáhne strukturovaná data pro zápis do systému. Výsledek vždy vizuálně zkontrolujte oproti originálu — skenované doklady mají někdy horší kvalitu a AI může špatně přečíst číslici.</p>
+              <div class="prompt-block">Z přiložených dokladů vytáhni následující údaje a vrať je v tabulce:
+
+datum | čas | popis | částka | měna | platba (hotově/kartou) | DPH (pokud je)
+
+U každého řádku uveď, ze kterého souboru nebo strany doklad pochází.
+Pokud je údaj nečitelný, napiš "nečitelný" — nedoplňuj.
+
+Na konci shrň:
+- celková částka v CZK a v EUR (v původní měně)
+- rozdělení podle kategorií (doprava / ubytování / strava / ostatní)
+
+Nikdy nedoplňuj chybějící hodnoty odhadem.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">7</span>
+              Kontrola náležitostí faktury
+              <span class="step-meta">Úplnost daňového dokladu dle §29 ZDPH</span>
+            </summary>
+            <div class="step-body">
+              <p>Nahrajte fakturu a AI zkontroluje, zda obsahuje všechny zákonné náležitosti daňového dokladu a zda souhlasí s objednávkou. Nenahrazuje finanční kontrolu — zaostřuje pozornost na konkrétní body, které je třeba ověřit.</p>
+              <div class="prompt-block">Zkontroluj přiloženou fakturu na úplnost a soulad s objednávkou [OBJEDNÁVKA_ID nebo SMLOUVA].
+
+Postup:
+1. Náležitosti daňového dokladu podle §29 ZDPH:
+   IČO, DIČ obou stran, datum vystavení, datum zdanitelného plnění,
+   číslo faktury, předmět plnění, základ daně, sazba a výše DPH,
+   celková částka
+2. Soulad s objednávkou: cena, množství, předmět, lhůta
+3. Cokoliv neobvyklého nebo podezřelého
+
+Vrať tabulku s body, které jsou v pořádku, a body, které je třeba ověřit nebo doplnit.
+Nevymýšlej chybějící hodnoty. Označ je jako "chybí".<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">8</span>
+              Odpovídám na opakující se dotaz
+              <span class="step-meta">Dvě varianty odpovědi — stručná a podrobnější — za minutu</span>
+            </summary>
+            <div class="step-body">
+              <p>Studijní oddělení, sekretariáty a oddělení pro zahraniční vztahy řeší stovky podobných dotazů ročně — o termínech, formulářích, pravidlech a procesech. AI napíše první verzi odpovědi na základě podkladů, které jí dodáte: studijní řád, formulář, interní směrnici nebo předchozí korespondenci. Výsledek vždy zkontrolujte a doplňte aktuální informace.</p>
+              <p><strong>Na co dát pozor:</strong> AI pracuje s podklady k datu jejich vydání — pokud se pravidla od té doby změnila, zkontrolujte aktuálnost podkladu. Pokud dotaz obsahuje osobní údaje studenta (jméno, osobní číslo), vložte pouze anonymizovaný popis situace. Odpověď nikdy neposílejte bez kontroly.</p>
+              <div class="prompt-block">Jsi asistentka studijního oddělení nebo sekretariátu fakulty.
+
+Navrhni odpověď na tento dotaz na základě přiložených podkladů. Neodpovídej z vlastní znalosti — pracuj výhradně s tím, co dostaneš.
+
+DOTAZ:
+[VLOŽTE DOTAZ — přesné znění nebo anonymizovaný popis situace]
+
+ADRESÁT:
+[student / kolega z jiné fakulty / externí partner / vedení]
+
+PODKLADY:
+[VLOŽTE RELEVANTNÍ ČÁST STUDIJNÍHO ŘÁDU, FORMULÁŘE, INTERNÍ SMĚRNICE NEBO PŘEDCHOZÍ KORESPONDENCE]
+
+Vrať dvě varianty odpovědi:
+A) Stručná — max 5 vět, věcná, přímá
+B) Podrobnější — do 150 slov, s odkazem na konkrétní pravidlo nebo termín
+
+Pravidla:
+Odpovídej pouze na základě přiložených podkladů.
+Pokud odpověď z podkladů nelze určit, napiš "odpověď není v podkladech" a navrhni, koho kontaktovat.
+Nevymýšlej termíny, paragrafy ani výjimky.
+Nepřidávej informace, které v podkladech nejsou.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <!-- Mantinely -->
+          <h2>Mantinely pro bezpečnou práci</h2>
+
+          <div class="warning-card">
+            <div class="warn-title">Co AI nikdy nedělá sama</div>
+            <ul>
+              <li>Neodesílá e-maily, neuzavírá smlouvy, neprovádí finanční transakce.</li>
+              <li>Nehodnotí výkon jednotlivých zaměstnanců ani studentů.</li>
+              <li>Nerozhoduje o studijních záležitostech (uznávání předmětů, výjimky).</li>
+              <li>Nepodepisuje dokumenty — podpis je vždy lidský úkon s odpovědností.</li>
+            </ul>
+          </div>
+
+          <div class="warning-card">
+            <div class="warn-title">Co do veřejné AI nedávat</div>
+            <p>Veřejná AI zahrnuje ChatGPT.com, Gemini.com, Claude.ai a další služby bez podnikové smlouvy. V Microsoft 365 Copilotu (přes účet ČZU) jsou data chráněna — níže uvedené pravidlo platí jen pro veřejné modely.</p>
+            <ul>
+              <li>Rodná čísla, čísla bankovních účtů, hesla.</li>
+              <li>Mzdové údaje, osobní spisy, hodnocení jednotlivců.</li>
+              <li>Neveřejné smlouvy, návrhy projektů před podáním, nepublikované výsledky.</li>
+              <li>Studijní agenda obsahující osobní údaje studentů.</li>
+              <li>Cokoliv označeného jako "důvěrné" nebo "interní".</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">✓</span>
+            <div>
+              <p><strong>Kontrolní otázka před vložením textu do AI:</strong> Vadilo by mi, kdyby tento text četl kolega z jiné instituce? Pokud ano, vložte ho jen do Copilotu 365 přes účet ČZU, nebo text nejprve anonymizujte.</p>
+            </div>
+          </div>
+
+          <!-- Závěrečný CTA -->
+          <h2>Jak začít</h2>
+          <div class="situation-card">
+            <p>Nezkoušejte vše najednou. Vyberte jednu situaci z úrovně 1 — nejsnazší je shrnutí e-mailové diskuse nebo pozvánka. Zkopírujte prompt, upravte parametry a výsledek zkontrolujte. Pokud výstup dává smysl, zkuste totéž příště bez návodu. Teprve pak přejděte na situaci z úrovně 2.</p>
+          </div>
+
         </article>
       </main>
     </div>

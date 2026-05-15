@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Technické tipy — FŽP AI Akademie</title>
+    <title>Tipy a triky — FŽP AI Akademie</title>
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body data-nav="navody-technicke">
@@ -15,16 +15,225 @@
       <main class="content">
         <header class="topbar">
           <nav class="breadcrumb">
-            <a href="../index.html">FŽP AI Akademie</a> › <span>Jak pracovat s AI</span> › <b>Technické tipy a triky</b>
+            <a href="../index.html">FŽP AI Akademie</a> › <span>Jak pracovat s AI</span> › <b>Tipy a triky</b>
           </nav>
         </header>
         <article class="page-body">
+
           <div class="page-header">
             <div class="label">Jak pracovat s AI</div>
-            <h1>Technické tipy a triky</h1>
-            <p class="perex">Exporty, pluginy, limity kontextu, práce s přílohami a užitečné zkratky.</p>
+            <h1>Tipy a triky</h1>
+            <p class="perex">Praktické techniky pro každého, kdo AI základně zná a chce z ní dostat konzistentně lepší výsledky — rychleji a s méně opravami.</p>
           </div>
-          <p class="placeholder-note">Sekce připravená k doplnění praktickými návody.</p>
+
+          <div class="situation-card">
+            <p>AI jste zkoušeli, ale výsledky jsou nepravidelné — jednou skvělé, jindy zklamání. Nebo příprava zadání zabírá víc času, než by měla. Tipy na této stránce adresují právě to: co dělat jinak, aby AI pracovala spolehlivěji.</p>
+          </div>
+
+          <!-- Základní tipy -->
+          <h2>Základní tipy</h2>
+          <p>Pět technik, které zlepší výsledky bez ohledu na to, jak dlouho AI používáte.</p>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">1</span>
+              Začněte otázkou, ne zadáním
+              <span class="step-meta">Buduje AI intuici postupně</span>
+            </summary>
+            <div class="step-body">
+              <p>Než zadáte úkol, položte si na chvíli otázku: "Jak by mi s tímto mohla pomoct AI?" Nemusíte AI vždy použít. Jde o to přestat automaticky přeskakovat k zavedenému postupu bez rozmyslu.</p>
+              <p>Tento zvyk buduje to, čemu se říká AI intuice — postupně poznáváte, kdy AI pomůže, kdy je potřeba jiný přístup a kdy je výsledek bez ověření nepoužitelný.</p>
+              <p><strong>Prompt k vyzkoušení:</strong> Zadejte do AI "Jak bys mi pomohl/a tento úkol udělat rychleji nebo systematičtěji?" a popište, co právě řešíte.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">2</span>
+              Kontext je polovina úspěchu
+              <span class="step-meta">Kvalita zadání = kvalita výstupu</span>
+            </summary>
+            <div class="step-body">
+              <p>Nejčastější důvod průměrného výstupu není nástroj — je to nedostatek kontextu v zadání. AI potřebuje vědět, kdo výstup použije, k čemu má sloužit, jaký má mít tón a jak má vypadat.</p>
+              <p><strong>Slabé zadání:</strong></p>
+              <p style="background:var(--color-surface); border:0.5px solid var(--color-border); border-radius:6px; padding:10px 14px; font-size:12px; font-style:italic;">Napiš pozvánku na workshop.</p>
+              <p><strong>Silné zadání:</strong></p>
+              <p style="background:var(--color-surface); border:0.5px solid var(--color-border); border-radius:6px; padding:10px 14px; font-size:12px; font-style:italic;">Potřebuji pozvánku na workshop pro pedagogy, cílem je ukázat praktické využití AI ve výuce. Publikum jsou převážně začátečníci, bez technického jazyka. Výstup má být stručný e-mail v češtině, přátelský tón.</p>
+              <p>Přidejte do zadání vždy: kdo je příjemce, k čemu výstup slouží, požadovaný tón a délku.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">3</span>
+              Žádejte více variant, ne jednu odpověď
+              <span class="step-meta">Výběr z variant je rychlejší než přepisování</span>
+            </summary>
+            <div class="step-body">
+              <p>Místo jedné odpovědi, kterou pak opakovaně upravujete, požádejte AI o několik variant najednou. Výběr z hotových možností šetří čas a ukáže rozsah, který byste sami nevymysleli.</p>
+              <p><strong>Příklady zadání:</strong></p>
+              <ul>
+                <li>"Navrhni 3 verze tohoto e-mailu: formální, stručnou a upravenou pro studenty."</li>
+                <li>"Navrhni 5 variant názvu této sekce. U každé napiš, pro jaký typ čtenáře se hodí."</li>
+                <li>"Napiš 3 různé způsoby, jak zahájit tuto přednášku."</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">4</span>
+              Používejte AI jako kritika a editora
+              <span class="step-meta">Funguje pro texty, osnovy i plány</span>
+            </summary>
+            <div class="step-body">
+              <p>AI nemusí jen tvořit — funguje velmi dobře jako editor nebo oponent. Vložte vlastní text a požádejte o zpětnou vazbu. Výsledek bývá konkrétnější než od lidského editora a přijde okamžitě.</p>
+              <p><strong>Příklady zadání:</strong></p>
+              <ul>
+                <li>"Zhodnoť tento text: co nefunguje, co je nejasné a co by šlo zlepšit?"</li>
+                <li>"Co v tomto návrhu chybí nebo co jsem přehlédl/a?"</li>
+                <li>"Navrhni upravenou verzi, ale zachovej můj styl a strukturu argumentu."</li>
+              </ul>
+              <p>Funguje pro akademické texty, osnovy kurzů, grantové části i administrativní dokumenty.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">5</span>
+              Z poznámek nebo zápisu rovnou k výstupu
+              <span class="step-meta">Jeden vstup, více výstupů</span>
+            </summary>
+            <div class="step-body">
+              <p>Z přepisu nebo hrubých poznámek ze schůzky, porady nebo konzultace AI vytvoří strukturovaný výstup — zápis, seznam úkolů, follow-up e-mail nebo podklad pro rozhodnutí.</p>
+              <p><strong>Příklad zadání:</strong></p>
+              <p style="background:var(--color-surface); border:0.5px solid var(--color-border); border-radius:6px; padding:10px 14px; font-size:12px; font-style:italic;">Z těchto poznámek ze schůzky vytvoř: 1. stručný zápis, 2. seznam úkolů s odpovědnými osobami, 3. návrh follow-up e-mailu účastníkům. [Vložte poznámky nebo přepis.]</p>
+              <p>Stejně funguje pro hlasové poznámky — nadiktujte hrubou myšlenku a zadejte AI: "Uspořádej tento text do jasné struktury. Zachovej smysl, ale udělej z toho použitelný pracovní podklad."</p>
+            </div>
+          </details>
+
+          <!-- Pokročilé tipy -->
+          <h2>Pokročilé techniky</h2>
+          <p>Pro ty, kdo AI používají pravidelně a chtějí pracovat systematičtěji.</p>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#004b3f">1</span>
+              Nechte AI nejdřív navrhnout postup
+              <span class="step-meta">Lepší u složitějších úkolů</span>
+            </summary>
+            <div class="step-body">
+              <p>U složitějších úkolů nezačínejte "napiš mi" — začněte "navrhni postup". AI pomůže rozdělit práci do kroků, pojmenovat rizika a připravit lepší zadání pro každou část.</p>
+              <p><strong>Příklad zadání:</strong></p>
+              <p style="background:var(--color-surface); border:0.5px solid var(--color-border); border-radius:6px; padding:10px 14px; font-size:12px; font-style:italic;">Než začneš tvořit výstup, navrhni mi nejdřív postup v 5 krocích. U každého kroku napiš, co bude potřeba ověřit nebo rozhodnout člověkem.</p>
+              <p>Tento přístup funguje obzvlášť dobře pro přípravu grantové žádosti, návrh kurzu nebo výzkumného designu.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#004b3f">2</span>
+              Nechte AI napsat zadání za vás
+              <span class="step-meta">Nemusíte umět prompt napsat</span>
+            </summary>
+            <div class="step-body">
+              <p>Pokud nevíte, jak zadat úkol, aby výstup byl dobrý, popište AI v hrubých rysech, co potřebujete, a nechte ji napsat strukturované zadání.</p>
+              <p><strong>Příklad zadání:</strong></p>
+              <p style="background:var(--color-surface); border:0.5px solid var(--color-border); border-radius:6px; padding:10px 14px; font-size:12px; font-style:italic;">Chci řešit tento úkol: [hrubý popis]. Napiš mi kvalitní zadání, které obsahuje: roli asistenta, cíl, kontext, formát výstupu a otázky, na které se má AI nejdřív doptat.</p>
+              <p>Takto vzniklé zadání pak uložte — příště ho použijete znovu pro podobné situace.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#004b3f">3</span>
+              Větší úkoly rozdělte na kroky
+              <span class="step-meta">Jeden prompt na celý úkol dává horší výsledky</span>
+            </summary>
+            <div class="step-body">
+              <p>Když chcete po AI příliš mnoho najednou, výstup bývá povrchní. Lepší je pracovat po krocích — každý krok zadáte samostatně a výsledky předchozího kroku vložíte jako vstup pro další.</p>
+              <p><strong>Příklad workflow pro přípravu výukového materiálu:</strong></p>
+              <ol>
+                <li>AI navrhne cílovou skupinu a výukové cíle.</li>
+                <li>AI navrhne osnovu na základě schválených cílů.</li>
+                <li>AI rozpracuje první část na základě schválené osnovy.</li>
+                <li>AI navrhne aktivitu nebo příklad k ověření.</li>
+                <li>Člověk zkontroluje, opraví a schválí celý výstup.</li>
+              </ol>
+              <p>Stejný princip platí pro přípravu grantu, analýzu dat nebo návrh výzkumné metodologie.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#004b3f">4</span>
+              Opakující se práci si systematicky uložte
+              <span class="step-meta">Přestaňte psát stejné věci znovu</span>
+            </summary>
+            <div class="step-body">
+              <p>Cokoliv zadáváte AI opakovaně — formát zápisu, styl e-mailu, instrukce pro korekce angličtiny — uložte si jako šablonu. Příště doplníte jen proměnné (datum, jméno, téma) a nebudete začínat od nuly.</p>
+              <p><strong>Typy šablon, které se na FŽP vyplatí mít:</strong></p>
+              <ul>
+                <li>Zápis z porady nebo konzultace se studenty</li>
+                <li>E-mail studentům o podmínkách zápočtu nebo zkoušky</li>
+                <li>Korektura a polish akademické angličtiny</li>
+                <li>Strukturování výzkumných poznámek do přehledného podkladu</li>
+                <li>Shrnutí dokumentu pro různé typy příjemců (vedení / studenti / partneři)</li>
+              </ul>
+              <p>Šablony ukládejte tam, kde je najdete — OneNote, soubor v Teams nebo prostý textový dokument.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#004b3f">5</span>
+              Dobré výstupy vracejte do systému
+              <span class="step-meta">Kvalita se zlepšuje sama</span>
+            </summary>
+            <div class="step-body">
+              <p>Když AI výstup upravíte a dostanete ho do dobré podoby, nenechte tuto informaci zmizet. Použijte ji ke zlepšení budoucího zadání.</p>
+              <p><strong>Příklad zadání:</strong></p>
+              <p style="background:var(--color-surface); border:0.5px solid var(--color-border); border-radius:6px; padding:10px 14px; font-size:12px; font-style:italic;">Porovnej tento výstup od AI a tuto opravou verzi ode mě. Odvoď pravidla, která mám příště přidat do zadání, aby výstup byl podobný mé opravené verzi rovnou.</p>
+              <p>Tato smyčka — zadat, opravit, odvodit pravidla, zlepšit zadání — postupně vytváří asistenta, který pracuje přesně podle vašich standardů.</p>
+            </div>
+          </details>
+
+          <!-- Nástroje -->
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">🔧</span>
+            <div>
+              <p><strong>Hledáte konkrétní nástroj?</strong></p>
+              <p>Přehled doporučených AI nástrojů pro výzkum, výuku, dokumenty a automatizaci najdete v <a href="../aplikace/galerie-nastroju.html">Galerii nástrojů</a>.</p>
+            </div>
+          </div>
+
+          <!-- Varování -->
+          <div class="warning-card">
+            <div class="warn-title">Pracovní data patří jen do schválených nástrojů</div>
+            <p>Do bezplatných nebo neověřených AI nástrojů nevkládejte osobní údaje studentů, neveřejné smlouvy, citlivá výzkumná data ani přístupové údaje. Pro pracovní obsah ČZU používejte Microsoft Copilot 365 přes účet ČZU. Podrobněji v sekci <a href="../bezpecnost/co-nesdilet.html">Co nesdílet s AI</a>.</p>
+          </div>
+
+          <!-- Prompt -->
+          <h2>Prompt pro jakýkoliv první krok</h2>
+          <p>Pokud nevíte, kde u nového úkolu začít, zkopírujte a doplňte:</p>
+          <div class="prompt-block">Jsi zkušený asistent pro akademické a administrativní prostředí.
+
+Chci si vyzkoušet AI na pracovním úkolu. Nejdřív mi navrhni postup — jak k tomuto úkolu přistoupit krok po kroku.
+
+ÚKOL:
+[POPIŠTE ÚKOL — co potřebujete udělat, jaký má být výsledek]
+
+CÍLOVÁ SKUPINA VÝSTUPU:
+[studenti / kolegové / vedení / partneři / veřejnost]
+
+Výstup má obsahovat:
+1. Navržený postup v bodech (max 5 kroků)
+2. U každého kroku: co udělá AI a co musím rozhodnout nebo ověřit já
+3. Otázky, které je potřeba zodpovědět před tím, než začneme
+
+Nepoužívej neověřená fakta.
+Pokud informaci nevíš, napiš co je potřeba dohledat — neodhaduj.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+
         </article>
       </main>
     </div>

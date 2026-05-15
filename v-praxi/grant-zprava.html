@@ -19,12 +19,330 @@
           </nav>
         </header>
         <article class="page-body">
+
           <div class="page-header">
             <div class="label">AI v praxi</div>
             <h1>Píšu grant nebo zprávu</h1>
-            <p class="perex">Struktura žádosti, jazyková úprava a rešerše — s důrazem na ověřitelnost tvrzení.</p>
+            <p class="perex">Od projektového nápadu přes žádost až po závěrečnou zprávu: AI pomůže se strukturou, argumentací a kontrolou konzistence. Odborný obsah, pravidla výzvy a finální odpovědnost zůstávají na vás.</p>
           </div>
-          <p class="placeholder-note">Obsah doplníme.</p>
+
+          <div class="situation-card">
+            <p>Grantová žádost není jen text — je to argumentační konstrukce: problém, mezera, řešení, výstupy, dopad, rozpočet a proveditelnost. AI pomůže udělat z chaosu pracovní strukturu, zkrátit texty, připravit checklisty a odhalit nejasnosti. Nesmí ale rozhodovat za vás, vymýšlet podmínky výzvy ani pracovat s citlivými údaji.</p>
+          </div>
+
+          <!-- Co AI zvládne a co ne -->
+          <h2>Co AI zvládne a co ne</h2>
+          <div class="two-col">
+            <div class="col-card col-yes">
+              <h3>AI pomůže</h3>
+              <ul>
+                <li>Převést projektový nápad do logiky hodnotitele</li>
+                <li>Vytáhnout z výzvy povinné části, termíny a hodnoticí kritéria</li>
+                <li>Navrhnout strukturu žádosti, pracovních balíčků a harmonogramu</li>
+                <li>Zpřesnit problém, mezeru v poznání, inovativnost a dopad</li>
+                <li>Zkontrolovat konzistenci mezi cíli, aktivitami, výstupy a rozpočtem</li>
+                <li>Připravit checklisty, shrnutí podkladů a manažerský souhrn</li>
+                <li>Shrnovat podklady pro ZoR, ŽoP a závěrečné zprávy</li>
+              </ul>
+            </div>
+            <div class="col-card col-no">
+              <h3>AI nenahradí</h3>
+              <ul>
+                <li>Znalost pravidel konkrétní výzvy</li>
+                <li>Odborný výzkumný přínos projektu</li>
+                <li>Kontrolu způsobilosti nákladů</li>
+                <li>Právní, finanční a institucionální kontrolu</li>
+                <li>Závazné posouzení rozpočtu, indikátorů a výstupů</li>
+                <li>Ověření, co je v daném programu skutečně dovoleno</li>
+                <li>Odpovědnost za pravdivost podaných údajů</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Workflow -->
+          <h2>Workflow: od nápadu po reporting</h2>
+          <div class="flow-strip">
+            <span class="flow-chip" style="background:#378ADD">1 Checklist z výzvy</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#7F77DD">2 Logika projektu</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#1D9E75">3 Pracovní plán</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#BA7517">4 Rozpočet</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#C0392B">5 Interní kontrola</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#378ADD">6 Řízení projektu</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#7F77DD">7 ZoR / zpráva</span>
+          </div>
+
+          <!-- Situační kroky -->
+          <h2>Jak na každý krok</h2>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">1</span>
+              Přečtěte výzvu a udělejte z ní checklist
+              <span class="step-meta">Povinné části, termíny, hodnoticí kritéria</span>
+            </summary>
+            <div class="step-body">
+              <p>Cíl: zjistit, co je povinné, co se hodnotí, jaké jsou limity, termíny a přílohy. AI dokáže z textu výzvy vytáhnout přehled požadavků, tabulku povinných příloh, seznam termínů, kontrolní otázky a návrh rozdělení úkolů mezi tým.</p>
+              <p><strong>Na co dát pozor:</strong> AI nesmí domýšlet podmínky výzvy. V promptu vždy napište: "Použij pouze text výzvy. Pokud informace není uvedena, napiš: informace není uvedena."</p>
+              <div class="prompt-block">Analyzuj tuto grantovou výzvu a vytvoř checklist pro přípravu žádosti.
+
+Text výzvy:
+[VLOŽTE VEŘEJNOU NEBO ANONYMIZOVANOU ČÁST VÝZVY]
+
+Výstup ve formátu tabulky:
+- Povinná část žádosti
+- Co je třeba dodat
+- Termín
+- Odpovědná osoba
+- Riziko
+- Co ověřit
+
+Důležité:
+Použij pouze informace z textu výzvy.
+Pokud něco není uvedeno, napiš "není uvedeno".
+Nepřidávej vlastní domněnky.
+Na konec přidej seznam otázek, které je nutné ověřit u poskytovatele nebo projektového oddělení.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#7F77DD">2</span>
+              Přepište projektový nápad do logiky hodnotitele
+              <span class="step-meta">Problém, mezera, řešení, dopad</span>
+            </summary>
+            <div class="step-body">
+              <p>Cíl: formulovat projekt tak, aby bylo jasné, proč je potřebný, co nového přináší a jaký bude mít dopad. AI pomáhá se strukturou a argumentací — výzkumný přínos musí pocházet od vás.</p>
+              <p>Doporučená struktura projektového záměru:</p>
+              <ol>
+                <li><strong>Problém:</strong> proč je důležitý</li>
+                <li><strong>Mezera:</strong> co zatím nevíme nebo neumíme</li>
+                <li><strong>Řešení:</strong> jaký přístup navrhujeme</li>
+                <li><strong>Inovativnost:</strong> v čem je projekt nový</li>
+                <li><strong>Výsledky:</strong> co konkrétně vznikne</li>
+                <li><strong>Dopad:</strong> komu a jak výsledky pomohou</li>
+                <li><strong>Proveditelnost:</strong> proč to tým zvládne</li>
+              </ol>
+              <div class="prompt-block">Jsi konzultant pro přípravu grantových žádostí v akademickém prostředí.
+
+Pomoz mi zhodnotit tento projektový záměr:
+[VLOŽTE ANONYMIZOVANÝ ZÁMĚR]
+
+Výstup:
+1. Stručné shrnutí záměru
+2. Problém, který projekt řeší
+3. Mezera v současném poznání nebo praxi
+4. Navržené řešení
+5. Měřitelné výstupy
+6. Praktický dopad
+7. Silné stránky záměru
+8. Slabá místa žádosti
+9. Otázky, které musíme doplnit před psaním
+
+Důležité:
+Použij pouze informace z mého zadání.
+Nevymýšlej data, partnery, rozpočet ani podmínky výzvy.
+Pokud informace chybí, označ ji jako "k doplnění".<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#1D9E75">3</span>
+              Rozpracujte pracovní plán
+              <span class="step-meta">Aktivity, milníky, výstupy, odpovědnosti</span>
+            </summary>
+            <div class="step-body">
+              <p>Cíl: převést projekt do aktivit, milníků, výstupů, indikátorů a odpovědností. AI může navrhnout pracovní balíčky, harmonogram, tabulku aktivit, přiřazení odpovědností, kontrolu návazností a návrh rizik a opatření.</p>
+              <p><strong>Na co dát pozor:</strong> Finální pracovní plán musí odpovídat pravidlům programu, kapacitám týmu a rozpočtu. AI nezná vaši konkrétní výzvu ani interní kapacity — finální plán musí projít vaší kontrolou.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#BA7517">4</span>
+              Připravte rozpočet a jeho zdůvodnění
+              <span class="step-meta">Struktura, vazba na aktivity, zdůvodnění položek</span>
+            </summary>
+            <div class="step-body">
+              <p>Cíl: vytvořit přehled nákladů, vazbu na aktivity a logické zdůvodnění. AI může navrhnout strukturu rozpočtové tabulky, rozdělení položek podle kategorií, formulaci zdůvodnění nákladů a kontrolu, zda má každá položka vazbu na aktivitu.</p>
+              <p><strong>Na co dát pozor:</strong> AI nesmí rozhodovat o způsobilosti nákladů. Kontrolu musí provést člověk podle pravidel výzvy a interních postupů. Konkrétní sazby, mzdy ani interní finanční data do AI nástroje nevkládejte.</p>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#C0392B">5</span>
+              Udělejte interní kontrolu žádosti
+              <span class="step-meta">Najděte slabá místa dřív než hodnotitel</span>
+            </summary>
+            <div class="step-body">
+              <p>Cíl: odhalit nesoulady a nejasnosti před podáním. AI zkontroluje, zda jsou cíle jasné a měřitelné, zda aktivity vedou k výstupům, zda výstupy odpovídají cílům, zda rozpočet odpovídá aktivitám, zda text není příliš obecný a zda jsou rizika realistická.</p>
+              <div class="prompt-block">Jsi interní reviewer grantové žádosti.
+
+Zkontroluj následující anonymizovaný text:
+[VLOŽTE TEXT]
+
+Zaměř se na:
+1. Je jasný problém?
+2. Je jasná mezera, kterou projekt řeší?
+3. Odpovídají cíle aktivitám?
+4. Odpovídají výstupy cílům?
+5. Je dopad konkrétní a realistický?
+6. Jsou formulace přesvědčivé pro hodnotitele?
+7. Kde text působí obecně, slabě nebo nepodloženě?
+8. Kde hrozí rozpor mezi cíli, metodami, výstupy a rozpočtem?
+
+Výstup:
+- Silné stránky
+- Slabá místa
+- Doporučené úpravy
+- Otázky pro řešitelský tým
+- Priorita úprav: vysoká / střední / nízká
+
+Nepřepisuj celý text. Nejprve udělej analytickou kontrolu.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">6</span>
+              Přepište text pro hodnotitele
+              <span class="step-meta">Jasnost, přesvědčivost, čitelnost</span>
+            </summary>
+            <div class="step-body">
+              <p>Cíl: udělat text přesvědčivějším a čitelnějším pro hodnotitele — aniž by se ztratila věcnost nebo přesnost. Funguje jak pro nové žádosti, tak pro přepracování zamítnutých nebo vrácených projektů.</p>
+              <div class="prompt-block">Jsi konzultant pro psaní grantových žádostí s dlouhou zkušeností v akademickém prostředí.
+
+Přepiš následující část žádosti tak, aby byla jasná, přesvědčivá a čitelná pro hodnotitele.
+
+Text:
+[VLOŽTE TEXT]
+
+Program:
+[GAČR / TA ČR / Horizon Europe / OP JAK / jiný]
+
+Cílový hodnotitel:
+[odborný panel / mezioborový panel / administrativní kontrola]
+
+Zachovej:
+- odbornou přesnost,
+- všechna důležitá fakta,
+- uvedená čísla,
+- význam původního textu.
+
+Zlepši:
+- jasnost problému,
+- logiku argumentace,
+- konkrétnost výstupů,
+- čitelnost,
+- návaznost na dopad.
+
+Nevymýšlej nové výsledky, partnery, data ani rozpočet.
+Na konec přidej sekci "Co ještě doplnit", pokud v textu něco chybí.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#7F77DD">7</span>
+              Připravte ZoR, ŽoP nebo závěrečnou zprávu
+              <span class="step-meta">Z podkladů realizace do věcné zprávy</span>
+            </summary>
+            <div class="step-body">
+              <p>Cíl: převést reálné podklady z realizace do jasné, věcné a konzistentní zprávy. AI pomůže shrnout aktivity za období, zformulovat dosažené výstupy, zkontrolovat návaznost na indikátory a označit chybějící podklady.</p>
+              <p><strong>Na co dát pozor:</strong> AI nesmí doplňovat výsledky, které ve skutečnosti nevznikly. Pokud podklad chybí, musí být označen jako "k doplnění" — ne domyšlen.</p>
+              <div class="prompt-block">Jsi projektový reporting asistent pro akademické projekty.
+
+Z těchto podkladů připrav návrh textu do projektové zprávy:
+[VLOŽTE ANONYMIZOVANÉ PODKLADY]
+
+Struktura výstupu:
+1. Co bylo v období realizováno
+2. Jaké výstupy vznikly
+3. Jaké indikátory se naplnily
+4. Co je rozpracované
+5. Rizika, zpoždění nebo chybějící podklady
+6. Co je třeba doplnit od týmu
+
+Důležité:
+Nevymýšlej žádné výsledky, indikátory ani termíny.
+Pokud informace chybí, označ ji jako "k doplnění".
+Piš věcně, projektově a bez marketingových frází.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+            </div>
+          </details>
+
+          <!-- Kontrolní checklist -->
+          <h2>Kontrolní checklist před odesláním</h2>
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">✓</span>
+            <div>
+              <p>Než odešlete žádost, ověřte:</p>
+              <ul>
+                <li>Jsou cíle jasné a měřitelné?</li>
+                <li>Navazují aktivity na cíle?</li>
+                <li>Navazují výstupy na aktivity?</li>
+                <li>Odpovídá rozpočet aktivitám?</li>
+                <li>Jsou indikátory realistické?</li>
+                <li>Je dopad konkrétní?</li>
+                <li>Jsou rizika pojmenovaná?</li>
+                <li>Jsou všechny termíny a přílohy ověřené?</li>
+                <li>Je jasné, kdo za co odpovídá?</li>
+                <li>Neobsahuje text formulace bez věcného obsahu?</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Doporučené nástroje -->
+          <h2>Doporučené nástroje pro granty</h2>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-name">ChatGPT</div>
+              <div class="tool-desc">Struktura žádosti, formulace, kontrola logiky, checklisty. Neposílat celé citlivé žádosti.</div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-name">Claude</div>
+              <div class="tool-desc">Dlouhé texty, přepis, revize, sjednocení stylu z více autorů.</div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-name">NotebookLM</div>
+              <div class="tool-desc">Práce s výzvou, metodikou a schválenými podklady. Odpovídá jen ze vložených zdrojů.</div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-name">Copilot 365</div>
+              <div class="tool-desc">Word, Excel, e-maily, shrnutí dokumentů v Microsoft prostředí. Vhodné pro workflow ČZU.</div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-name">Perplexity</div>
+              <div class="tool-desc">Ověřování veřejných informací a rešerše. Vždy kontrolovat původní zdroje.</div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-name">Elicit / Consensus</div>
+              <div class="tool-desc">Rešerše, srovnání studií, podklady pro zdůvodnění projektu. Jen pro veřejná data.</div>
+            </div>
+          </div>
+
+          <!-- Bezpečnostní varování -->
+          <div class="warning-card">
+            <div class="warn-title">Co do AI nedávat</div>
+            <p>Citlivé grantové dokumenty do běžných AI nástrojů nepatří. Konkrétně: celý grant před podáním, neveřejný projektový záměr bez anonymizace, osobní údaje členů týmu, interní rozpočty a mzdy, důvěrná stanoviska a hodnoticí posudky, nepublikovaná data a předběžné výsledky, smlouvy a neveřejné přílohy. Pro práci s pracovními dokumenty ČZU používejte Microsoft Copilot 365 přes účet ČZU.</p>
+          </div>
+
+          <div class="warning-card">
+            <div class="warn-title">Tři kontrolní otázky před vložením textu do AI</div>
+            <ol>
+              <li>Vadilo by mi, kdyby tento text četl hodnotitel, konkurent nebo externí partner?</li>
+              <li>Obsahuje text osobní, finanční, neveřejné nebo strategické údaje?</li>
+              <li>Mám právo tento obsah vložit do vybraného AI nástroje?</li>
+            </ol>
+            <p>Pokud je odpověď nejistá, text nevkládejte nebo ho nejprve anonymizujte.</p>
+          </div>
+
         </article>
       </main>
     </div>

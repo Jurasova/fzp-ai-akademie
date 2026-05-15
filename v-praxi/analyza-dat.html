@@ -7,27 +7,273 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body data-nav="vpraxi-data">
-    <script>
-      window.PORTAL_PATH_PREFIX = '../';
-    </script>
+    <script>window.PORTAL_PATH_PREFIX = '../';</script>
+
     <div class="shell">
       <aside id="sidebar"></aside>
+
       <main class="content">
         <header class="topbar">
           <nav class="breadcrumb">
-            <a href="../index.html">FŽP AI Akademie</a> › <span>AI v praxi</span> › <b>Analyzuji data</b>
+            <a href="../index.html">FŽP AI Akademie</a>
+            › <span>AI v praxi</span>
+            › <b>Analyzuji data</b>
           </nav>
         </header>
+
         <article class="page-body">
+
           <div class="page-header">
             <div class="label">AI v praxi</div>
             <h1>Analyzuji data</h1>
-            <p class="perex">Čištění dat, skripty, interpretace — kde použít LLM a kde statistický software.</p>
+            <p class="perex">Čištění dat, explorativní analýza a interpretace statistik: kde AI urychlí práci a kde musíte rozhodnout sami.</p>
           </div>
-          <p class="placeholder-note">Obsah doplníme.</p>
+
+          <div class="situation-card">
+            <p>Máte dataset - výsledky měření, dotazníkové odpovědi nebo data sebraná z terénu. Nemusíte ovládat R ani Python, aby vám AI pomohla s prvním přehledem, čistěním nebo přípravou vizualizací. Rozhodnutí o metodě a interpretaci výsledků ale zůstávají na vás.</p>
+          </div>
+
+          <h2>Co AI zvládne a co ne</h2>
+          <div class="two-col">
+            <div class="col-card col-yes">
+              <h3>AI pomůže</h3>
+              <ul>
+                <li>Popsat strukturu datasetu a identifikovat chybějící nebo podezřelé hodnoty</li>
+                <li>Vygenerovat kód pro čištění dat v R nebo Pythonu bez nutnosti programovat</li>
+                <li>Prohledat data a zodpovědět otázky přirozeným jazykem</li>
+                <li>Vytvořit kontingenční tabulky, grafy a vzorce v Excelu</li>
+                <li>Vygenerovat kód pro statistické testy a vizualizace výsledků</li>
+                <li>Vysvětlit složité statistické vzorce a tabulky z citovaných článků</li>
+              </ul>
+            </div>
+            <div class="col-card col-no">
+              <h3>AI nenahradí</h3>
+              <ul>
+                <li>Výběr vhodné statistické metody (vyžaduje znalost oboru a porozumění datům)</li>
+                <li>Ověření předpokladů testu (normalita, homoskedasticita, nezávislost pozorování)</li>
+                <li>Interpretaci výsledků v kontextu vašeho výzkumného tématu</li>
+                <li>Odpovědnost za správnost analýzy v publikaci</li>
+                <li>Posouzení, zda je dataset reprezentativní nebo dostatečně velký pro zvolený test</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>Workflow: od datasetu po výsledky</h2>
+          <div class="flow-strip">
+            <span class="flow-chip" style="background:#378ADD">1 Čištění</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#1D9E75">2 Průzkum</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#7F77DD">3 Excel</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#BA7517">4 Statistika</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-chip" style="background:#007364">5 Metody</span>
+          </div>
+
+          <!-- Krok 1 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#378ADD">1</span>
+              Zkontrolujte dataset před analýzou
+              <span class="step-meta">Claude</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Výsledek:</strong> Odhalíte chyby, které by zkreslily výsledky.</p>
+              <p>Popište AI strukturu svého datasetu a ta navrhne, na co se zaměřit: chybějící hodnoty, duplicity, odlehlé hodnoty nebo nekonzistentní formáty. Pro větší soubory vygeneruje kód, který data projde automaticky.</p>
+              <p>Použijte tento prompt v <span class="tool-badge badge-purple">Claude</span>:</p>
+              <div class="prompt-block">Mám dataset ve formátu [CSV / Excel / jiný].
+Obsahuje [POČET ŘÁDKŮ] řádků a tyto sloupce:
+[NÁZEV SLOUPCE 1]: [co obsahuje, příklad hodnoty]
+[NÁZEV SLOUPCE 2]: [co obsahuje, příklad hodnoty]
+[...další sloupce...]
+
+Identifikuj, na co se zaměřit před analýzou:
+1. Chybějící hodnoty (které sloupce, přibližný podíl)
+2. Potenciální duplicity (podle kterých sloupců)
+3. Odlehlé hodnoty (které proměnné jsou náchylné)
+4. Nekonzistentní formáty (datum, kategorie, znaky)
+
+Výstup: kontrolní seznam problémů s doporučením jak každý ošetřit.
+Pokud to má smysl, přidej kód v [R / Python] pro automatické prověření.
+
+Nevymýšlej data ani výsledky - vycházej jen z popisu, který jsem ti dal/a.
+Pokud informace nestačí pro konkrétní doporučení, napiš "k doplnění".<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <div class="warning-card">
+                <div class="warn-title">Na co dát pozor</div>
+                <p>Do Claude.ai (verze zdarma) ani jiných veřejných nástrojů nevkládejte nepublikovaná výzkumná data ani citlivé údaje respondentů. Pro data z pracovního prostředí ČZU použijte Microsoft 365 Copilot přes účet ČZU, nebo data před vložením anonymizujte.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 2 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#1D9E75">2</span>
+              Prozkoumejte data bez kódu
+              <span class="step-meta">Julius.ai</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Výsledek:</strong> Rychlý přehled proměnných, distribucí a korelací - bez jediného řádku kódu.</p>
+              <p>Julius.ai umožní nahrát CSV nebo Excel soubor a ptát se na data přirozeným jazykem. Vrátí grafy, statistické přehledy a korelační matice. Funguje jako datový analytik, který čte váš soubor a odpovídá na vaše otázky.</p>
+              <p>Po nahrání souboru v <span class="tool-badge badge-teal">Julius.ai</span> použijte tento prompt:</p>
+              <div class="prompt-block">Nahrál/a jsem dataset. Potřebuji:
+1. Základní statistiky pro každou proměnnou (průměr, medián, min, max, počet chybějících hodnot).
+2. Histogram nebo boxplot pro [NÁZEV PROMĚNNÉ].
+3. Korelační matici pro [VYBRANÉ PROMĚNNÉ nebo "všechny numerické proměnné"].
+4. Krátký komentář k distribuci dat - co je neobvyklé nebo zajímavé.
+
+Zaměř se na: [VÝZKUMNÁ OTÁZKA nebo PROMĚNNÁ, KTERÁ MĚ ZAJÍMÁ].
+
+Pokud je něco v datech nejasné nebo chybí kontext, zeptej se - neodhaduj.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <div class="warning-card">
+                <div class="warn-title">Na co dát pozor</div>
+                <p>Julius.ai je placená služba (zkušební verze zdarma, poté předplatné). Před nahráním zkontrolujte, zda soubor neobsahuje osobní nebo neveřejné údaje - podmínky ochrany dat Julius.ai se liší od Microsoft 365.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 3 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#7F77DD">3</span>
+              Analyzujte v Excelu s Copilotem
+              <span class="step-meta">Microsoft 365 Copilot</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Výsledek:</strong> Kontingenční tabulky, komplexní vzorce a grafy bez manuálního nastavení.</p>
+              <p>Pokud pracujete v Excelu a máte licenci Microsoft 365 Copilot přes ČZU, AI pomůže vytvořit kontingenční tabulky, napsat vzorce jako AVERAGEIFS nebo COUNTIFS a vysvětlit výsledky. Data zůstávají v prostředí Microsoft 365 chráněném podnikovou smlouvou ČZU.</p>
+              <p>Zadejte do <span class="tool-badge badge-blue">Microsoft 365 Copilot</span>:</p>
+              <div class="prompt-block">Mám tabulku s těmito sloupci: [SEZNAM SLOUPCŮ].
+Potřebuji:
+1. Kontingenční tabulku zobrazující [CO CHCI POROVNAT nebo SESKUPIT].
+2. Vzorec pro výpočet [CO POČÍTÁM] pro každou kategorii [NÁZEV SLOUPCE].
+3. Graf zobrazující [CO CHCI VIZUALIZOVAT] - typ grafu: [sloupcový / liniový / bodový].
+
+Vysvětli mi výsledky v 2-3 větách.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <div class="warning-card">
+                <div class="warn-title">Na co dát pozor</div>
+                <p>Microsoft 365 Copilot v Excelu vyžaduje licenci ČZU. Pokud k němu nemáte přístup, obraťte se na IT oddělení.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 4 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#BA7517">4</span>
+              Vygenerujte kód pro statistický test
+              <span class="step-meta">Claude</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Výsledek:</strong> Hotový R nebo Python kód pro váš konkrétní test - zkopírujete, doplníte, spustíte.</p>
+              <p>Popište, co chcete testovat, jaký máte typ dat a jaký programovací jazyk preferujete. Claude vygeneruje kód pro ověření předpokladů testu, provedení analýzy, vizualizaci výsledků a stručnou interpretaci. Kód spustíte v RStudiu, Pythonu nebo Google Colab - Claude kód nespouští za vás.</p>
+              <p>Použijte tento prompt v <span class="tool-badge badge-purple">Claude</span>:</p>
+              <div class="prompt-block">Mám dataset ve formátu [CSV / Excel].
+Sloupce relevantní pro analýzu:
+[NÁZEV SLOUPCE]: [popis - závislá/nezávislá proměnná, typ dat]
+[NÁZEV SLOUPCE]: [popis]
+
+Hypotéza nebo výzkumná otázka: [NAPIŠTE]
+Programovací jazyk: [R / Python]
+
+Vygeneruj kód pro:
+1. Ověření předpokladů zvoleného testu (normalita, homoskedasticita, nebo jiné relevantní).
+2. Provedení vhodného statistického testu.
+3. Vizualizaci výsledků (graf nebo tabulka).
+4. Interpretaci výsledků v 2-3 větách srozumitelných pro nestatistika.
+
+Kód musí být spustitelný v [RStudiu / Google Colab / Jupyter Notebook].
+Nevymýšlej výsledky ani hodnoty - generuj jen kód.
+Pokud popis dat nestačí pro výběr testu, vypiš možnosti a zeptej se.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <div class="warning-card">
+                <div class="warn-title">Na co dát pozor</div>
+                <p>Vygenerovaný kód vždy otestujte na malém vzorku dat před spuštěním na celém datasetu. AI může navrhnout test, jehož předpoklady vaše data nesplňují - to musíte ověřit sami nebo se poradit s biostatistikem.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Krok 5 -->
+          <details class="step">
+            <summary>
+              <span class="step-num" style="background:#007364">5</span>
+              Ověřte si metody z citovaných článků
+              <span class="step-meta">SciSpace</span>
+            </summary>
+            <div class="step-body">
+              <p><strong>Výsledek:</strong> Srozumitelné vysvětlení statistického vzorce nebo tabulky přímo v PDF.</p>
+              <p>SciSpace umí funkci "Explain Math and Table" - kliknete na vzorec nebo statistickou tabulku v PDF článku a dostanete vysvětlení v angličtině nebo češtině. Pomáhá pochopit metody, které chcete replikovat, nebo rozumět výsledkům jiných studií, které citujete.</p>
+              <p>Pokud SciSpace nemáte, zvládne stejnou věc <span class="tool-badge badge-purple">Claude</span> jako textový dotaz:</p>
+              <div class="prompt-block">Vysvětli mi tento statistický vzorec nebo tabulku z vědeckého článku:
+
+[ZKOPÍRUJTE VZOREC nebo POPIS TABULKY]
+
+Kontext: [STRUČNÝ POPIS ČLÁNKU - téma, výzkumná otázka].
+Obor: [VÁŠ OBOR - ekologie, agronomie, hydrologie...].
+
+Vysvětlení pro výzkumníka se základní znalostí statistiky:
+1. Co vzorec nebo tabulka říká (laikou).
+2. Kdy se tato metoda používá.
+3. Jak správně interpretovat výsledky (co je pozitivní, co negativní výsledek).
+4. Na co si dát pozor při interpretaci.
+
+Nevymýšlej výsledky ani hodnoty - vycházej jen z toho, co jsem ti dal/a.<button class="copy-btn" onclick="copyPrompt(this)">Kopírovat</button></div>
+              <div class="warning-card">
+                <div class="warn-title">Na co dát pozor</div>
+                <p>SciSpace pracuje s veřejně publikovanými PDF. Nepublikované rukopisy, recenzní posudky ani interní zprávy nenahrávejte do bezplatných online nástrojů.</p>
+              </div>
+            </div>
+          </details>
+
+          <h2>Jaké nástroje použít</h2>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-phase">Průzkum dat</div>
+              <h4>Julius.ai</h4>
+              <p>Nahrajte CSV nebo Excel a ptejte se přirozeným jazykem. Grafy a statistiky bez kódu. Zkušební verze zdarma.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Excel s AI</div>
+              <h4>Microsoft 365 Copilot v Excelu</h4>
+              <p>Kontingenční tabulky, vzorce a grafy s AI asistencí. Vyžaduje licenci ČZU - data zůstávají v prostředí Microsoft 365.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Kód a čištění</div>
+              <h4>Claude</h4>
+              <p>Generuje R nebo Python kód pro čištění dat, statistické testy a vizualizace. Bezplatná verze s denním limitem.</p>
+            </div>
+            <div class="tool-card">
+              <div class="tool-phase">Metody z literatury</div>
+              <h4>SciSpace</h4>
+              <p>Funkce "Explain Math and Table" vysvětlí vzorec nebo tabulku z PDF článku kliknutím. Základní použití zdarma.</p>
+            </div>
+          </div>
+
+          <h2>Bezpečnost při práci s daty</h2>
+
+          <div class="warning-card">
+            <div class="warn-title">Nepublikovaná výzkumná data</div>
+            <p>Nepublikovaná výzkumná data, surová data z terénního měření ani osobní údaje respondentů nevkládejte do veřejných AI nástrojů (Julius.ai, Claude.ai, ChatGPT.com, Gemini.com). Použijte Microsoft 365 Copilot přes účet ČZU, nebo data před vložením anonymizujte. Více v sekci <a href="../bezpecnost/co-nesdilet.html">Co nesdílet s AI</a>.</p>
+          </div>
+
+          <div class="warning-card">
+            <div class="warn-title">Odpovědnost za analýzu</div>
+            <p>AI generovaný kód nebo analýza jsou výchozím bodem, ne finálním výsledkem. Statistické metody, výběr testů a interpretaci výsledků vždy ověřte sami nebo s odborníkem na biostatistiku. Za správnost analýzy v publikaci odpovídáte vy jako autor/ka.</p>
+          </div>
+
+          <div class="situation-card">
+            <p><strong>Kde začít:</strong> Pokud s datovou analýzou s AI začínáte, zkuste nejdříve Krok 3 - Copilot v Excelu. Pracujete s nástrojem, který pravděpodobně už máte, data zůstávají v prostředí ČZU a výsledek vidíte okamžitě. Pro hlubší analýzu a kód přejděte na Krok 4.</p>
+          </div>
+
+          <p class="muted-footer">
+            Poslední aktualizace: květen 2026 · FŽP AI Akademie ·
+            Dotazy pište do Teams kanálu AI na FŽP.
+          </p>
+
         </article>
       </main>
     </div>
+
     <script src="../utils.js"></script>
     <script src="../sidebar.js"></script>
   </body>

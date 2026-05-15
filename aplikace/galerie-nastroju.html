@@ -18,39 +18,542 @@
       </header>
       <article class="page-body">
 
-        <div class="app-label" style="color:#888780">Aplikace · Přehled nástrojů</div>
-        <h1>Galerie AI nástrojů</h1>
-        <p class="perex">Přehled doporučených AI nástrojů pro práci, výuku a výzkum na FŽP ČZU. Nástroje jsou rozděleny do kategorií — najdete chatboty, vědecké nástroje, nástroje pro dokumenty, vizualizace i automatizaci.</p>
+        <div class="page-header">
+          <div class="label">Aplikace · Přehled nástrojů</div>
+          <h1>Galerie AI nástrojů</h1>
+          <p class="perex">Přehled doporučených AI nástrojů pro práci, výuku a výzkum na FŽP ČZU. Nástroje jsou rozděleny do kategorií - najdete chatboty, vědecké nástroje, nástroje pro dokumenty, vizualizace, video, přepisy i automatizaci.</p>
+        </div>
 
-        <div class="jak-pracovat" style="background:#e9e4dc; border-left-color:#6b655c">
+        <div class="jak-pracovat">
           <div class="jak-pracovat__header">
-            <div class="jak-pracovat__icon" style="background:#6b655c"></div>
-            <span class="jak-pracovat__title" style="color:#6b655c">Jak s tím pracovat</span>
+            <div class="jak-pracovat__icon"></div>
+            <span class="jak-pracovat__title">Jak s tím pracovat</span>
           </div>
           <p class="jak-pracovat__text">
-            Vyberte kategorii podle toho, co potřebujete udělat — ne podle toho, co jste slyšeli.
+            Vyberte kategorii podle toho, co potřebujete udělat - ne podle toho, co jste slyšeli.
             Každý nástroj má popis, k čemu je nejlepší, a přímý odkaz.
-            Tip: začněte 1–2 nástroji a postupně experimentujte s dalšími.
+            Začněte 1-2 nástroji a postupně experimentujte s dalšími.
           </p>
           <div class="jak-pracovat__priklad">
-            <span class="jak-pracovat__priklad-label" style="color:#6b655c">Příklad</span>
-            Potřebujete shrnout 30 vědeckých článků → kategorie Výzkum → Elicit nebo Consensus
-            → výsledky za minuty místo hodin.
+            <span class="jak-pracovat__priklad-label">Příklad</span>
+            Potřebujete shrnout 30 vědeckých článků - kategorie Výzkum - Elicit nebo Consensus - výsledky za minuty místo hodin.
           </div>
         </div>
 
-        <div class="app-actions">
-          <a class="btn-primary" href="https://jurasova.github.io/promptbanka-ai/galerie_ai_nastroje.html"
-             target="_blank" rel="noopener"
-             style="background:#888780">
-            Otevřít galerii nástrojů →
-          </a>
+        <!-- Navigace po kategoriích -->
+        <nav class="tools-cat-nav" aria-label="Kategorie nástrojů">
+          <a href="#chatboti">Chatboti</a>
+          <a href="#prompty">Prompty a optimalizace</a>
+          <a href="#dokumenty">Dokumenty a analýza</a>
+          <a href="#vizualizace">Vizualizace a design</a>
+          <a href="#interaktivita">Interaktivita</a>
+          <a href="#vzdelavani">Vzdělávací nástroje</a>
+          <a href="#vyzkum">Výzkum</a>
+          <a href="#audio">Audio a hlas</a>
+          <a href="#prepisy">Přepisy a meetingy</a>
+          <a href="#video">Video</a>
+          <a href="#automatizace">Automatizace</a>
+          <a href="#kodovani">Kódování s AI</a>
+          <a href="#aplikace">Tvorba aplikací</a>
+        </nav>
+
+        <!-- ── Chatboti ─────────────────────────────────────────────── -->
+        <div class="tools-section" id="chatboti">
+          <h2>Chatboti</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Univerzální</div>
+              <h4>ChatGPT</h4>
+              <div class="tool-provider">OpenAI</div>
+              <p>Univerzální nástroj pro tvorbu materiálů, brainstorming, revizi textů. Možnost vytvořit vlastní GPT asistenty pro opakované úkoly.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> univerzální použití, tvorbu vlastních asistentů, začátečníky</div>
+              <a class="tool-link" href="https://chatgpt.com" target="_blank" rel="noopener">Otevřít ChatGPT →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Google integrace</div>
+              <h4>Gemini</h4>
+              <div class="tool-provider">Google</div>
+              <p>AI asistent s přímou integrací do Google Workspace. Multimodální - pracuje s textem, obrázky i videi. Velmi rozsáhlý kontext dokumentů.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> práci v Google ekosystému, multimodální analýzu</div>
+              <a class="tool-link" href="https://gemini.google.com" target="_blank" rel="noopener">Otevřít Gemini →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Dlouhé texty</div>
+              <h4>Claude</h4>
+              <div class="tool-provider">Anthropic</div>
+              <p>Vynikající pro práci s dlouhými texty a složitými úkoly. Hloubková analýza dokumentů, strukturované myšlení, práce s PDF, kódování.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> dlouhé texty, analýzu, kódování, komplexní úkoly</div>
+              <a class="tool-link" href="https://claude.ai" target="_blank" rel="noopener">Otevřít Claude →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Microsoft integrace</div>
+              <h4>Copilot</h4>
+              <div class="tool-provider">Microsoft</div>
+              <p>AI asistent integrovaný do Microsoft 365. Dostupný přes účet ČZU zdarma. Pracuje přímo v Teams, Outlooku, Wordu, PowerPointu a Excelu.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> práci v Microsoft ekosystému, pracovní data (bezpečnost)</div>
+              <a class="tool-link" href="https://copilot.microsoft.com" target="_blank" rel="noopener">Otevřít Copilot →</a>
+            </div>
+
+          </div>
         </div>
 
-        <div class="app-meta">
-          <div class="app-meta__item"><strong>Určeno pro:</strong> vědce, pedagogy, administrativu</div>
-          <div class="app-meta__item"><strong>Kategorie:</strong> chatboti, dokumenty, výzkum, audio, automatizace</div>
-          <div class="app-meta__item"><strong>Aktualizováno:</strong> duben 2026</div>
+        <!-- ── Prompty a optimalizace ──────────────────────────────── -->
+        <div class="tools-section" id="prompty">
+          <h2>Prompty a optimalizace</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Pro začátečníky</div>
+              <h4>Prompt Asistent</h4>
+              <div class="tool-provider">GPT-based</div>
+              <p>Pomáhá psát lepší prompty. Transformuje jednoduché instrukce na efektivní požadavky, které dávají přesnější výsledky. Učí vás formulovat efektivní instrukce.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> začátečníky s AI, zvýšení kvality výstupů</div>
+              <a class="tool-link" href="https://chatgpt.com/g/g-prompt-maker" target="_blank" rel="noopener">Otevřít Prompt Asistent →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Pokročilá optimalizace</div>
+              <h4>MetaPrompt</h4>
+              <div class="tool-provider">Prompt Optimizer</div>
+              <p>Pokročilý nástroj pro optimalizaci promptů. Analyzuje instrukce, klade upřesňující otázky a vytváří vylepšené verze s jasnější strukturou.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> pokročilé uživatele, profesionální práci s AI</div>
+              <a class="tool-link" href="https://metaprompt.ai" target="_blank" rel="noopener">Otevřít MetaPrompt →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Dokumenty a analýza ────────────────────────────────── -->
+        <div class="tools-section" id="dokumenty">
+          <h2>Dokumenty a analýza</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Audio souhrny</div>
+              <h4>NotebookLM</h4>
+              <div class="tool-provider">Google</div>
+              <p>Nahrajete dokumenty a získáte audio souhrn (podcast styl), myšlenkové mapy nebo interaktivní přehledy. Zodpovídá otázky z vašich materiálů s citacemi.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> transformaci materiálů do audio formátu, vytváření podcastů ze zdrojů</div>
+              <a class="tool-link" href="https://notebooklm.google.com" target="_blank" rel="noopener">Otevřít NotebookLM →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Vizualizace a design ────────────────────────────────── -->
+        <div class="tools-section" id="vizualizace">
+          <h2>Vizualizace a design</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Rychlé infografiky</div>
+              <h4>Napkin.ai</h4>
+              <div class="tool-provider">Napkin</div>
+              <p>Zadáte text, během sekund získáte profesionální infografiku nebo diagram. Flowcharty, mindmapy, timeline v různých stylech. Export do prezentací.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> rychlou vizualizaci konceptů, infografiky, diagramy</div>
+              <a class="tool-link" href="https://napkin.ai" target="_blank" rel="noopener">Otevřít Napkin.ai →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Obrázky s textem</div>
+              <h4>Ideogram</h4>
+              <div class="tool-provider">Ideogram</div>
+              <p>Generuje obrázky s textem a nápisy. Zvládá začlenění textu do obrázků lépe než jiné AI nástroje. Postery, ilustrace, vizuály s přesnou typografií.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> vizuály s textem, postery, grafiku pro prezentace</div>
+              <a class="tool-link" href="https://ideogram.ai" target="_blank" rel="noopener">Otevřít Ideogram →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Komplexní design</div>
+              <h4>Canva</h4>
+              <div class="tool-provider">Canva</div>
+              <p>Designový nástroj s AI funkcemi. Šablony pro prezentace, postery, pracovní listy. AI generování obrázků, úprava fotografií, text-to-image.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> tvorbu vizuálních materiálů, pracovní listy, postery</div>
+              <a class="tool-link" href="https://canva.com" target="_blank" rel="noopener">Otevřít Canva →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">AI prezentace</div>
+              <h4>Gamma.app</h4>
+              <div class="tool-provider">Gamma</div>
+              <p>Vytváří profesionální prezentace automaticky z textu nebo osnovy. Moderní předpřipravené designy, interaktivní webové prezentace, export do PDF nebo PowerPoint.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> rychlou tvorbu prezentací, moderní design</div>
+              <a class="tool-link" href="https://gamma.app" target="_blank" rel="noopener">Otevřít Gamma.app →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Slides a PowerPoint</div>
+              <h4>Plus AI</h4>
+              <div class="tool-provider">Plus AI</div>
+              <p>AI doplněk přímo do Google Slides a PowerPointu. Generuje nové slidy, přepisuje texty, navrhuje rozložení a vizuály - bez opuštění aplikace.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> tvorbu prezentací k grantům a výuce přímo v Google nebo Office</div>
+              <a class="tool-link" href="https://plusai.com" target="_blank" rel="noopener">Otevřít Plus AI →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Generátor obrázků</div>
+              <h4>Midjourney</h4>
+              <div class="tool-provider">Midjourney</div>
+              <p>Jeden z nejkvalitnějších generátorů obrázků - fotorealistické i umělecké vizuály z textového popisu. Vhodné pro ilustrace do prezentací a publikací.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> tvorbu kvalitních vizuálů pro materiály a prezentace</div>
+              <a class="tool-link" href="https://midjourney.com" target="_blank" rel="noopener">Otevřít Midjourney →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Interaktivita ───────────────────────────────────────── -->
+        <div class="tools-section" id="interaktivita">
+          <h2>Interaktivita a zpětná vazba</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Živá zpětná vazba</div>
+              <h4>Mentimeter</h4>
+              <div class="tool-provider">Mentimeter</div>
+              <p>Interaktivní nástroj pro ankety, kvízy a sběr okamžité zpětné vazby. Real-time hlasování, word clouds, Q&amp;A session. Studenti zapojeni přes mobil.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> aktivizaci studentů, okamžitou zpětnou vazbu, diskuze</div>
+              <a class="tool-link" href="https://mentimeter.com" target="_blank" rel="noopener">Otevřít Mentimeter →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Vzdělávací nástroje ─────────────────────────────────── -->
+        <div class="tools-section" id="vzdelavani">
+          <h2>Vzdělávací nástroje</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Analýza videí</div>
+              <h4>ChatTube</h4>
+              <div class="tool-provider">ChatTube</div>
+              <p>Umožňuje vložit odkaz na YouTube video a dotazovat se na jeho obsah nebo si projít kompletní přepis. Shrnutí klíčových bodů s časovými značkami.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> práci s video materiály, analýzu odborných videí</div>
+              <a class="tool-link" href="https://chattube.io" target="_blank" rel="noopener">Otevřít ChatTube →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Výzkum ──────────────────────────────────────────────── -->
+        <div class="tools-section" id="vyzkum">
+          <h2>Výzkum a vyhledávání</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Aktuální informace</div>
+              <h4>Perplexity</h4>
+              <div class="tool-provider">Perplexity AI</div>
+              <p>Vyhledávač kombinující chatbota s aktuálním prohledáváním webu. Automatické citace zdrojů, shrnutí z více zdrojů najednou, ověřování faktů.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> rychlý research, ověřování informací, aktuální data</div>
+              <a class="tool-link" href="https://perplexity.ai" target="_blank" rel="noopener">Otevřít Perplexity →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Vědecké studie</div>
+              <h4>Consensus</h4>
+              <div class="tool-provider">Consensus</div>
+              <p>AI nástroj pro vyhledávání a analýzu vědeckých výzkumů. Shrnutí z peer-reviewed článků, analýza konsenzu ve výzkumu, přímé citace z publikací.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> vědecký výzkum, literature review, fact-checking</div>
+              <a class="tool-link" href="https://consensus.app" target="_blank" rel="noopener">Otevřít Consensus →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Research asistent</div>
+              <h4>Elicit</h4>
+              <div class="tool-provider">Elicit</div>
+              <p>AI asistent pro vědeckou práci. Vyhledávání relevantních článků, automatická extrakce klíčových dat, tabulkové přehledy studií, porovnání metodologií.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> literature review, systematické přehledy, analýzu studií</div>
+              <a class="tool-link" href="https://elicit.com" target="_blank" rel="noopener">Otevřít Elicit →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Čtení článků</div>
+              <h4>SciSpace</h4>
+              <div class="tool-provider">SciSpace</div>
+              <p>AI asistent pro práci s vědeckými články. Vysvětluje složité pasáže, matematické rovnice a odbornou terminologii. Dotazování na PDF dokumenty.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> čtení vědeckých článků, pochopení složitých témat</div>
+              <a class="tool-link" href="https://typeset.io" target="_blank" rel="noopener">Otevřít SciSpace →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Mapování literatury</div>
+              <h4>Litmaps</h4>
+              <div class="tool-provider">Litmaps</div>
+              <p>Vizuální mapování vědecké literatury pomocí citačních sítí. Pomáhá objevovat související články, sledovat vývoj výzkumu a export citací.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> rešerše, mapování výzkumného pole, hledání souvisejících studií</div>
+              <a class="tool-link" href="https://www.litmaps.com" target="_blank" rel="noopener">Otevřít Litmaps →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Audio a hlas ───────────────────────────────────────── -->
+        <div class="tools-section" id="audio">
+          <h2>Audio a hlas</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Transkripce</div>
+              <h4>Whisper Flow</h4>
+              <div class="tool-provider">OpenAI Whisper</div>
+              <p>Přesný nástroj pro převod audio a video nahrávek na text. Podpora češtiny, automatické časové značky, export do různých formátů. Zpracování dlouhých nahrávek.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> přepisy přednášek, rozhovorů, vytváření titulků</div>
+              <a class="tool-link" href="https://whisperflow.com" target="_blank" rel="noopener">Otevřít Whisper Flow →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Text na hlas</div>
+              <h4>ElevenLabs</h4>
+              <div class="tool-provider">ElevenLabs</div>
+              <p>Nejlepší text-to-speech nástroj. Realistické hlasy v mnoha jazycích, klonování vlastního hlasu, dubbing videí do jiných jazyků. Profesionální kvalita.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> audio materiály, přístupnost obsahu, podcasty</div>
+              <a class="tool-link" href="https://elevenlabs.io" target="_blank" rel="noopener">Otevřít ElevenLabs →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Přepisy a meetingy ──────────────────────────────────── -->
+        <div class="tools-section" id="prepisy">
+          <h2>Přepisy a meetingy</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Přepis nahrávek</div>
+              <h4>TurboScribe</h4>
+              <div class="tool-provider">TurboScribe</div>
+              <p>Přepíše jakoukoliv zvukovou nebo video nahrávku na text - přesně a s podporou češtiny. Vhodné pro terénní nahrávky, záznamy přednášek nebo rozhovory s respondenty.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> přepisy nahrávek z výzkumu, přednášek a pohovorů</div>
+              <a class="tool-link" href="https://turboscribe.ai" target="_blank" rel="noopener">Otevřít TurboScribe →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Přepis schůzek</div>
+              <h4>TLDV</h4>
+              <div class="tool-provider">tl;dv</div>
+              <p>Nahraje a přepíše online schůzky v Teams nebo Zoom. AI vytvoří shrnutí, zapíše úkoly a rozhodnutí. Zápis z porady hotový automaticky bez manuálních poznámek.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> automatické zápisy z porad a projektových schůzek</div>
+              <a class="tool-link" href="https://tldv.io" target="_blank" rel="noopener">Otevřít TLDV →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Analýza meetingů</div>
+              <h4>Fireflies</h4>
+              <div class="tool-provider">Fireflies.ai</div>
+              <p>Automaticky nahrává, přepisuje a analyzuje schůzky. AI najde klíčové body, úkoly a rozhodnutí. Prohledávatelný archiv všech porad - vhodné pro projektové týmy.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> projektové týmy, archivaci schůzek, sledování úkolů</div>
+              <a class="tool-link" href="https://fireflies.ai" target="_blank" rel="noopener">Otevřít Fireflies →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Video ──────────────────────────────────────────────── -->
+        <div class="tools-section" id="video">
+          <h2>Video</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Střih zdarma</div>
+              <h4>Clipchamp</h4>
+              <div class="tool-provider">Microsoft</div>
+              <p>Bezplatný online video editor dostupný přes účet ČZU v rámci Microsoft 365. Jednoduchý střih záznamů přednášek, přidání titulků a export ve vysokém rozlišení.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> střih výukových videí bez instalace, přístupné přes M365</div>
+              <a class="tool-link" href="https://www.microsoft.com/en-us/microsoft-365/clipchamp" target="_blank" rel="noopener">Otevřít Clipchamp →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Video jako text</div>
+              <h4>Descript</h4>
+              <div class="tool-provider">Descript</div>
+              <p>Editujete video stejně snadno jako textový dokument - smažete slovo v přepisu a zmizí i z videa. Ideální pro úpravu záznamů přednášek nebo výzkumných prezentací.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> úpravu mluvených videí a záznamů přednášek</div>
+              <a class="tool-link" href="https://www.descript.com" target="_blank" rel="noopener">Otevřít Descript →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Video s avatarem</div>
+              <h4>HeyGen</h4>
+              <div class="tool-provider">HeyGen</div>
+              <p>Nástroj pro rychlou tvorbu videí s AI avatary. Nahraje váš obličej a hlas, pak za vás natočí video v jakémkoliv jazyce - bez kamery a studia.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> výuková videa v cizím jazyce, personalizovaný obsah bez natáčení</div>
+              <a class="tool-link" href="https://www.heygen.com" target="_blank" rel="noopener">Otevřít HeyGen →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Video z textu</div>
+              <h4>Kling AI</h4>
+              <div class="tool-provider">Kling AI</div>
+              <p>Generuje vysoce kvalitní videa z textového popisu nebo obrázku. Silný v realistickém pohybu a fyzice objektů. Vhodné pro tvorbu animovaných vysvětlení jevů.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> animované vizualizace a krátká výuková videa z textu</div>
+              <a class="tool-link" href="https://klingai.com" target="_blank" rel="noopener">Otevřít Kling AI →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Výukové video</div>
+              <h4>Synthesia</h4>
+              <div class="tool-provider">Synthesia</div>
+              <p>Vytvoří profesionální výukové video z textu - vyberete AI avatara, napíšete scénář a za pár minut máte hotové video. Vhodné pro e-learning bez natáčení.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> tvorbu e-learningového obsahu a výukových videí bez studia</div>
+              <a class="tool-link" href="https://www.synthesia.io" target="_blank" rel="noopener">Otevřít Synthesia →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Automatizace ────────────────────────────────────────── -->
+        <div class="tools-section" id="automatizace">
+          <h2>Automatizace</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Microsoft workflow</div>
+              <h4>Power Automate</h4>
+              <div class="tool-provider">Microsoft</div>
+              <p>Platforma pro automatizaci procesů přímo v Microsoft 365. Propojí Outlook, SharePoint, Teams a další nástroje - dostupné přes účet ČZU bez příplatku.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> automatizaci opakujících se úkolů v prostředí Microsoft 365</div>
+              <a class="tool-link" href="https://make.powerautomate.com" target="_blank" rel="noopener">Otevřít Power Automate →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Vizuální automatizace</div>
+              <h4>Make</h4>
+              <div class="tool-provider">Make</div>
+              <p>Vizuální platforma pro propojení aplikací a automatizaci procesů. Přetahujete bloky a vytváříte scénáře bez jediného řádku kódu. Tisíce integrací.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> automatizaci workflow mezi různými aplikacemi bez programování</div>
+              <a class="tool-link" href="https://www.make.com" target="_blank" rel="noopener">Otevřít Make →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">AI v smyčce</div>
+              <h4>Relay</h4>
+              <div class="tool-provider">Relay</div>
+              <p>Automatizační platforma, kde AI agenti spolupracují s lidmi - některé kroky udělá AI automaticky, u důležitých rozhodnutí se zeptá člověka.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> procesy vyžadující kombinaci automatizace a lidského schválení</div>
+              <a class="tool-link" href="https://relay.app" target="_blank" rel="noopener">Otevřít Relay →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Vlastní copilot</div>
+              <h4>Microsoft Copilot Studio</h4>
+              <div class="tool-provider">Microsoft</div>
+              <p>Platforma pro tvorbu vlastních AI asistentů a automatizací. Propojí se s Microsoft 365 a firemními daty - bez nutnosti programování.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> tvorbu vlastních chatbotů a asistentů nad daty instituce</div>
+              <a class="tool-link" href="https://copilotstudio.microsoft.com" target="_blank" rel="noopener">Otevřít Copilot Studio →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Pokročilý workflow</div>
+              <h4>n8n</h4>
+              <div class="tool-provider">n8n</div>
+              <p>Nástroj pro automatizaci workflow s vizuálním editorem. Funguje v cloudu i jako self-hosted s plnou kontrolou nad daty. Vhodné pro technicky zdatnější uživatele.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> pokročilé automatizace s požadavkem na kontrolu dat</div>
+              <a class="tool-link" href="https://n8n.io" target="_blank" rel="noopener">Otevřít n8n →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Kódování s AI ───────────────────────────────────────── -->
+        <div class="tools-section" id="kodovani">
+          <h2>Kódování s AI</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">AI editor kódu</div>
+              <h4>Cursor</h4>
+              <div class="tool-provider">Anysphere</div>
+              <p>AI editor kódu, který rozumí celému projektu. Píše, opravuje a přepisuje kód na základě konverzace. Vhodné pro analýzu dat v Pythonu nebo R.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> analýzu výzkumných dat, skripty a automatizaci v Pythonu nebo R</div>
+              <a class="tool-link" href="https://cursor.com" target="_blank" rel="noopener">Otevřít Cursor →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Napovídání kódu</div>
+              <h4>GitHub Copilot</h4>
+              <div class="tool-provider">Microsoft / GitHub</div>
+              <p>AI kodovací asistent napovídající kód v reálném čase přímo v editoru. Funguje ve VS Code, Visual Studio i JetBrains. Zrychluje psaní skriptů a analýz.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> zrychlení psaní kódu při analýze dat a zpracování výsledků</div>
+              <a class="tool-link" href="https://github.com/features/copilot" target="_blank" rel="noopener">Otevřít GitHub Copilot →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Editor kódu</div>
+              <h4>Visual Studio Code</h4>
+              <div class="tool-provider">Microsoft</div>
+              <p>Bezplatný editor kódu od Microsoftu s tisíci rozšířeními. S integrovaným GitHub Copilotem se stává plnohodnotným AI vývojovým prostředím pro analýzu dat.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> komplexní analytické projekty v Pythonu, R nebo jiných jazycích</div>
+              <a class="tool-link" href="https://code.visualstudio.com" target="_blank" rel="noopener">Otevřít VS Code →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">AI v terminálu</div>
+              <h4>Claude Code</h4>
+              <div class="tool-provider">Anthropic</div>
+              <p>Agentní kodovací nástroj od Anthropic přímo v terminálu. Claude rozumí celému projektu, edituje soubory, spouští testy a commituje výsledky autonomně.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> pokročilé automatizované kódovací úkoly a správu projektů</div>
+              <a class="tool-link" href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener">Otevřít Claude Code →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── Tvorba aplikací ─────────────────────────────────────── -->
+        <div class="tools-section" id="aplikace">
+          <h2>Tvorba aplikací</h2>
+          <div class="tools-grid">
+
+            <div class="tool-card">
+              <div class="tool-phase">Popis na aplikaci</div>
+              <h4>Lovable</h4>
+              <div class="tool-provider">Lovable</div>
+              <p>AI nástroj, který z vašeho popisu vytvoří webovou aplikaci. Funguje jako osobní vývojář, se kterým si píšete v chatu - bez programování.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> rychlou tvorbu jednoduchých webových nástrojů a formulářů</div>
+              <a class="tool-link" href="https://lovable.dev" target="_blank" rel="noopener">Otevřít Lovable →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Online prostředí</div>
+              <h4>Replit</h4>
+              <div class="tool-provider">Replit</div>
+              <p>Online prostředí pro vývoj, kde s pomocí AI píšete, testujete a spouštíte aplikace přímo v prohlížeči. Žádná instalace - vše běží v cloudu.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> experimentování s kódem a rychlé prototypy bez instalace</div>
+              <a class="tool-link" href="https://replit.com" target="_blank" rel="noopener">Otevřít Replit →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Vibe coding</div>
+              <h4>Macaly</h4>
+              <div class="tool-provider">Macaly</div>
+              <p>Nástroj, ve kterém postavíte web nebo aplikaci konverzací. Mluvíte s ním jako s kolegou a on píše a upravuje kód podle vašich pokynů.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> tvorbu jednoduchých webů a nástrojů konverzačním způsobem</div>
+              <a class="tool-link" href="https://macaly.com" target="_blank" rel="noopener">Otevřít Macaly →</a>
+            </div>
+
+            <div class="tool-card">
+              <div class="tool-phase">Testování modelů</div>
+              <h4>Google AI Studio</h4>
+              <div class="tool-provider">Google</div>
+              <p>Prostředí od Googlu, kde si vyzkoušíte nejnovější AI modely Gemini. Ideální pro rychlé prototypy, testování nápadů a experimentování s AI bez programování.</p>
+              <div class="tool-best-for"><strong>Nejlepší pro:</strong> experimentování s AI modely a rychlé prototypování nápadů</div>
+              <a class="tool-link" href="https://aistudio.google.com" target="_blank" rel="noopener">Otevřít Google AI Studio →</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="info-card" style="margin-top:40px">
+          <span class="info-icon" aria-hidden="true">💬</span>
+          <div>
+            <p><strong>Znáte nástroj, který tu chybí?</strong></p>
+            <p>Portál se průběžně aktualizuje. Pokud víte o nástroji vhodném pro akademické prostředí FŽP, dejte vědět. <a href="mailto:mullerovav@fzp.czu.cz?subject=FŽP AI Akademie – návrh nástroje">Napsat tip →</a></p>
+          </div>
         </div>
 
       </article>
